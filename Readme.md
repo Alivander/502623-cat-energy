@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алина Ваниева](https://up.htmlacademy.ru/adaptive/13/user/502623).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Алипкин](https://github.com/ealipkin).
 
 ---
 
