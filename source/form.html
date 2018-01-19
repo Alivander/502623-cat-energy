@@ -37,6 +37,85 @@
 
     <main class="main main--inner">
 
+      <h2 class="main__heading">Подбор программы</h2>
+
+      <p class="main__info">Заполните анкету и мы подберем программу питания для вашего кота</p>
+
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+
+        <fieldset class="form__fieldset form__fieldset--border">
+          <label class="form__filed">
+            Имя:*
+            <input class="form__input" type="text" name="name" value="Барсик" required>
+          </label>
+          <label class="form__filed">
+            Вес (кг):*
+            <input class="form__input" type="text" name="weight" value="7" required>
+          </label>
+          <label class="form__filed">
+            Возраст (лет):
+            <input class="form__input" type="text" name="age" value="7">
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset form__fieldset--border">
+          <label class="form__filed">
+            <input class="visually-hidden" type="radio" name="program" value="slim" checked>
+            <span class="form__value">Похудение</span>
+          </label>
+          <label class="form__filed">
+            <input class="visually-hidden" type="radio" name="program" value="pro">
+            <span class="form__value">Набор массы</span>
+          </label>
+          <label class="form__filed">
+            <input class="visually-hidden" type="radio" name="program" value="advice">
+            <span class="form__value">Не знаю (нужен ваш совет)</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Контактные данные (владельца кота)</legend>
+          <label class="form__filed">
+            E-mail:*
+            <input class="form__input form__input--email" type="email" name="age" value="kuklachev@gmail.com" required>
+          </label>
+          <label class="form__filed">
+            Телефон:*
+            <input class="form__input" type="tel" name="age" value="8 (960) 900-60-90" required>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Комментарий</legend>
+          <textarea class="form__comment">Расскажите обо всех повадках кота</textarea>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Дополнительно</legend>
+          <label class="form__filed">
+            <input class="visually-hidden" type="checkbox" name="sweetener" checked>
+            <span class="form__value">Сахарозаменитель</span>
+          </label>
+          <label class="form__filed">
+            <input class="visually-hidden" type="checkbox" name="water">
+            <span class="form__value">Питьевая вода</span>
+          </label>
+          <label class="form__filed">
+            <input class="visually-hidden" type="checkbox" name="milk">
+            <span class="form__value">Молоко</span>
+          </label>
+          <label class="form__filed">
+            <input class="visually-hidden" type="checkbox" name="vitamins">
+            <span class="form__value">Витамины</span>
+          </label>
+        </fieldset>
+
+        <button class="button form__submit" type="submit">Отправить заявку</button>
+
+        <span class="form__note">* — Обязательные поля</span>
+
+      </form>
+
     </main>
 
     <footer class="footer footer--inner">
