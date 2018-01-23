@@ -1,11 +1,14 @@
 .programs {
-  padding: 22px 20px;
+  padding: 22px 20px 0;
 }
 
 .programs__variant {
-  margin-bottom: 20px;
   padding: 22px 20px;
   background-color: $l-grey-1;
+
+  &:first-of-type {
+    margin-bottom: 20px;
+  }
 }
 
 .programs__heading {
