@@ -1,1 +1,22 @@
-.page {}
+.page {
+
+  &--back {
+    // будет добавлять зеленый фон на экранах побольше
+  }
+}
+
+.page__title {
+  margin: 0;
+  @include font (36px, 60px);
+  color: $d-grey-3;
+
+  &--white {
+    color: #ffffff;
+  }
+}
+
+.page__sub-title {
+  margin: 0;
+  @include font (24px, 37px);
+  color: $d-grey-3;
+}
