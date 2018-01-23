@@ -1,0 +1,14 @@
+.button {
+  @include button-reset;
+  display: inline-block;
+  min-width: 100%;
+  padding: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $green-1;
+
+  &--grey {
+    background-color: $l-grey-1;
+  }
+}
