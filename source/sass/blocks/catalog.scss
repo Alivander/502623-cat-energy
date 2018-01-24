@@ -1,5 +1,42 @@
-.catalog {}
+.catalog {
+  border-top: 1px solid $l-grey-1;
+}
 
 .catalog__item {
   border-bottom: 1px solid $l-grey-1;
+}
+
+.catalog__more {
+  margin: 0;
+  padding: 27px 20px 23px;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid $l-grey-1;
+
+  &::before {
+    content: "";
+    display: block;
+    margin: 0 auto 22px;
+    width: 30px;
+    height: 30px;
+    background-image: url("http://placehold.it/30x30");
+    background-position: center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+  }
+}
+
+.catalog__note {
+  display: block;
+  margin-bottom: 8px;
+  @include font (16px, 20px);
+  text-transform: uppercase;
+  color: $d-grey-3;
+}
+
+.catalog__more span {
+  display: block;
+  margin-bottom: 22px;
+  font-family: "Arial", sans-serif;
+  @include font (12px, 16px);
 }
