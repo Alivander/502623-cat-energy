@@ -13,7 +13,7 @@
 
 .programs__heading {
 
-  @include font (24px, 37px);
+  @include font(24px, 37px);
 
   position: relative;
   margin: 0;
@@ -33,7 +33,7 @@
 
 .programs__link {
 
-  @include font (16px, 16px);
+  @include font(16px, 16px);
 
   position: relative;
   text-transform: uppercase;

@@ -33,7 +33,7 @@
 
 .example__count {
 
-  @include font (24px, 24px);
+  @include font(24px, 24px);
 
   display: block;
   text-transform: uppercase;
@@ -42,7 +42,7 @@
 
 .example__sub {
 
-  @include font (12px, 12px);
+  @include font(12px, 12px);
 
   position: absolute;
   top: 85%;
