@@ -32,20 +32,24 @@
 }
 
 .example__count {
-  display: block;
+
   @include font (24px, 24px);
+
+  display: block;
   text-transform: uppercase;
   color: $d-grey-3;
 }
 
 .example__sub {
+
+  @include font (12px, 12px);
+
   position: absolute;
   top: 85%;
   left: 15%;
   width: 70%;
   padding: 0 15px;
   font-family: "Arial", sans-serif;
-  @include font (12px, 12px);
   background-color: $l-grey-1;
 }
 

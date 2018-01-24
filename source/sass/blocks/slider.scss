@@ -1,21 +1,20 @@
-.slider {}
-
 .slider__content {
   position: relative;
   margin-bottom: 20px;
 }
 
 .slider__image {
-
   &:not(:first-of-type) {
     display: none;  // временно
   }
 }
 
 .slider__control {
+
+  @include font (16px, 20px);
+
   margin: 0;
   margin-bottom: 18px;
-  @include font (16px, 20px);
   text-align: center;
   text-transform: uppercase;
   color: $d-grey-3;

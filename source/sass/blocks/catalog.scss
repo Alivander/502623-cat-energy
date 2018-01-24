@@ -28,16 +28,20 @@
 }
 
 .catalog__note {
+
+  @include font (16px, 20px);
+
   display: block;
   margin-bottom: 8px;
-  @include font (16px, 20px);
   text-transform: uppercase;
   color: $d-grey-3;
 }
 
 .catalog__more span {
+
+  @include font (12px, 16px);
+
   display: block;
   margin-bottom: 22px;
   font-family: "Arial", sans-serif;
-  @include font (12px, 16px);
 }

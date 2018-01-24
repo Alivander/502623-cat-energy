@@ -18,10 +18,12 @@
 }
 
 .related__title {
+
+  @include font (16px, 16px);
+
   width: 100%;
   margin: 0;
   margin-bottom: 10px;
-  @include font (16px, 16px);
   text-transform: uppercase;
   color: $d-grey-2;
 }

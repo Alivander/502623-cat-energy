@@ -12,11 +12,13 @@
 }
 
 .programs__heading {
+
+  @include font (24px, 37px);
+
   position: relative;
   margin: 0;
   margin-bottom: 20px;
   padding: 8px 0 8px 72px;
-  @include font (24px, 37px);
   color: $d-grey-3;
   text-transform: uppercase;
 }
@@ -30,8 +32,10 @@
 }
 
 .programs__link {
-  position: relative;
+
   @include font (16px, 16px);
+
+  position: relative;
   text-transform: uppercase;
   color: $d-grey-3;
 }
