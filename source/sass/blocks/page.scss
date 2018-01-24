@@ -7,7 +7,7 @@
 
 .page__title {
   margin: 0;
-  padding: 15px 20px 28px;
+  padding: 15px 20px 25px;
   @include font (36px, 60px);
   color: $d-grey-3;
 
@@ -18,17 +18,17 @@
 
 .page__sub-title {
   display: flex;
-  align-items: center;
   margin: 0;
-  padding: 22px 0 26px;
-  @include font (24px, 37px);
+  padding: 0;
+  padding-bottom: 33px;
+  @include font (24px, 24px);
   color: $d-grey-3;
 
   &::after {
     content: "";
     position: relative;
     flex-grow: 1;
-    top: 3px;
+    top: 15px;
     right: -20px;
     min-width: 40px;
     height: 3px;
