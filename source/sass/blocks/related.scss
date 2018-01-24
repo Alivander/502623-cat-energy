@@ -1,0 +1,34 @@
+.related {
+  padding: 0 20px 20px;
+}
+
+.related__products {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid $l-grey-3;
+}
+
+.related__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 0 16px;
+  border-bottom: 1px solid $l-grey-3;
+}
+
+.related__title {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  @include font (16px, 16px);
+  text-transform: uppercase;
+  color: $d-grey-3;
+}
+
+.related__count,
+.related__price {
+  max-width: 50%;
+  margin-bottom: 13px;
+  font-family: "Arial", sans-serif;
+}

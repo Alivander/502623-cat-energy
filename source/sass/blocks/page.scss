@@ -17,7 +17,21 @@
 }
 
 .page__sub-title {
+  display: flex;
+  align-items: center;
   margin: 0;
+  padding: 22px 0 26px;
   @include font (24px, 37px);
   color: $d-grey-3;
+
+  &::after {
+    content: "";
+    position: relative;
+    flex-grow: 1;
+    top: 3px;
+    right: -20px;
+    min-width: 40px;
+    height: 3px;
+    background-color: $green-1;
+  }
 }
