@@ -32,18 +32,14 @@
 }
 
 .example__count {
-
   @include font(24px, 24px);
-
   display: block;
   text-transform: uppercase;
   color: $d-grey-3;
 }
 
 .example__sub {
-
   @include font(12px, 12px);
-
   position: absolute;
   top: 85%;
   left: 15%;

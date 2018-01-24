@@ -28,7 +28,6 @@
 }
 
 .form__field {
-
   @include font(16px, 18px);
 
   display: flex;
@@ -58,7 +57,6 @@
 }
 
 .form__comment {
-
   @include font(16px, 18px);
 
   display: block;
