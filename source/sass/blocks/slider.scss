@@ -1,0 +1,10 @@
+.slider {
+  position: relative;
+}
+
+.slider__image {
+
+  &:not(:first-of-type) {
+    display: none;  // временно
+  }
+}
