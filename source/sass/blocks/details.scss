@@ -1,0 +1,31 @@
+.details {
+  padding: 15px 20px 20px;
+}
+
+.details__heading {
+  margin-bottom: 30px;
+}
+
+.details__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.details__item {
+  display: flex;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-color: $green-1;
+    background-image: url("");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

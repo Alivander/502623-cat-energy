@@ -1,0 +1,36 @@
+.page {
+  &--back {
+    // будет добавлять зеленый фон на экранах побольше
+  }
+}
+
+.page__title {
+  @include font(36px, 60px);
+  margin: 0;
+  padding: 15px 20px 25px;
+  color: $d-grey-3;
+
+  &--white {
+    color: #ffffff;
+  }
+}
+
+.page__sub-title {
+  @include font(24px, 24px);
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 33px;
+  color: $d-grey-3;
+
+  &::after {
+    content: "";
+    position: relative;
+    flex-grow: 1;
+    top: 15px;
+    right: -20px;
+    min-width: 40px;
+    height: 3px;
+    background-color: $green-1;
+  }
+}

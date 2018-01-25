@@ -1,0 +1,58 @@
+.example {
+  padding: 18px 20px;
+  background-color: $l-grey-1;
+}
+
+.example__heading {
+  margin-bottom: 23px;
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: "Arial", sans-serif;
+}
+
+.example__resume {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.example__result {
+  position: relative;
+  width: 44.6%;
+  padding: 13px 20px 17px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid $l-grey-3;
+}
+
+.example__count {
+  @include font(24px, 24px);
+  display: block;
+  text-transform: uppercase;
+  color: $d-grey-3;
+}
+
+.example__sub {
+  @include font(12px, 12px);
+  position: absolute;
+  top: 85%;
+  left: 15%;
+  width: 70%;
+  padding: 0 15px;
+  font-family: "Arial", sans-serif;
+  background-color: $l-grey-1;
+}
+
+.example__cost {
+  display: block;
+  margin-bottom: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $d-grey-3;
+}

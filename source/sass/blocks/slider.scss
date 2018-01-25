@@ -1,0 +1,49 @@
+.slider__content {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.slider__image {
+  &:not(:first-of-type) {
+    display: none;  // временно
+  }
+}
+
+.slider__control {
+  @include font(16px, 20px);
+  margin: 0;
+  margin-bottom: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $d-grey-3;
+}
+
+.slider__toggle {
+  position: relative;
+  display: inline-block;
+  width: 84px;
+  height: 14px;
+  margin: 0 18px;
+  background-color: #ffffff;
+  border: 1px solid $l-grey-3;
+  border-radius: 7px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    width: 35px;
+    height: 6px;
+    background-color: $green-1;
+    border-radius: 3px;
+  }
+
+  &--before::before {
+    left: 5px;
+  }
+
+  &--after::before {
+    right: 5px;
+  }
+}

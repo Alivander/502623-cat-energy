@@ -1,0 +1,15 @@
+.logo {
+  position: relative;
+  display: block;
+  min-height: 66px;
+  padding: 24px 20px;
+  text-align: center;
+  border-bottom: 1px solid $l-grey-2;
+}
+
+.logo__image {
+  position: absolute;
+  top: 11px;
+  left: 20px;
+  display: block;
+}

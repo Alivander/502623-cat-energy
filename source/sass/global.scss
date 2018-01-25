@@ -1,0 +1,33 @@
+html,
+body {
+  min-width: $small-screen;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $d-grey-1;
+  background-color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+}

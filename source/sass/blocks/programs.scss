@@ -1,0 +1,37 @@
+.programs {
+  padding: 22px 20px 0;
+}
+
+.programs__variant {
+  padding: 22px 20px;
+  background-color: $l-grey-1;
+
+  &:first-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.programs__heading {
+  @include font(24px, 37px);
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 8px 0 8px 72px;
+  color: $d-grey-3;
+  text-transform: uppercase;
+}
+
+.programs__description {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-family: "Arial", sans-serif;
+  border-bottom: 1px solid $l-grey-3;
+}
+
+.programs__link {
+  @include font(16px, 16px);
+  position: relative;
+  text-transform: uppercase;
+  color: $d-grey-3;
+}

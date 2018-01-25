@@ -1,0 +1,28 @@
+.navigation__toggle {
+  @include button-reset;
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  width: 24px;
+  height: 18px;
+  background-image: url("http://placehold.it/24x18");
+  background-position: center;
+  background-size: 28px 18px;
+  background-repeat: no-repeat;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__item {
+  @include font(20px, 20px, 500);
+  min-height: 66px;
+  padding: 22.5px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $d-grey-3;
+  border-bottom: 1px solid $l-grey-2;
+}
