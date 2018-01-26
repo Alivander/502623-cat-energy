@@ -1,6 +1,7 @@
 .promo {
   @include container;
   position: relative;
+  z-index: 1;
   padding: 27px 20px 0;
   text-align: center;
   color: #ffffff;
@@ -20,7 +21,9 @@
   }
 
   @media (min-width: $large-screen) {
-    color: #ffffff;
+    min-height: 553px;
+    margin-bottom: 80px;
+    padding: 80px 120px 0;
   }
 }
 
@@ -33,6 +36,11 @@
     margin-bottom: 40px;
     padding: 0 87px;
   }
+
+  @media (min-width: $large-screen) {
+    padding-left: 0;
+    max-width: 600px;
+  }
 }
 
 .promo__slogan {
@@ -42,6 +50,11 @@
   @media (min-width: $medium-screen){
     margin-bottom: 16px;
     padding: 0 87px;
+  }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 50px;
+    padding-left: 0;
   }
 }
 
@@ -56,6 +69,10 @@
   }
 
   @media (min-width: $large-screen) {
+    position: absolute;
+    top: 0;
+    right: 258px;
+    z-index: -1;
     width: 552px;
     height: 499px;
   }
@@ -71,5 +88,9 @@
     width: auto;
     padding-top: 14px;
     padding-bottom: 14px;
+  }
+
+  @media (min-width: $large-screen) {
+    position: static;
   }
 }
