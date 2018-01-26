@@ -7,18 +7,47 @@
     padding-top: 17px;
     background: none;
   }
+
+  @media (min-width: $large-screen) {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 0;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 210px, $l-grey-1 210px, $l-grey-1 100%);
+    background-position: center bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.example__wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: $medium-screen) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $large-screen) {
+    flex-shrink: 0;
+    width: 610px;
+    padding: 57px 0 0 40px;
+  }
 }
 
 .example__heading {
-  @include container;
 
   @media (min-width: $medium-screen) {
     margin-bottom: 38px;
   }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 120px;
+  }
 }
 
 .example__description {
-  @include container;
   margin: 0;
   margin-bottom: 23px;
   font-family: "Arial", sans-serif;
@@ -26,10 +55,14 @@
   @media (min-width: $medium-screen) {
     margin-bottom: 53px;
   }
+
+  @media (min-width: $large-screen) {
+    max-width: 435px;
+    margin-bottom: 68px;
+  }
 }
 
 .example__resume {
-  @include container;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,6 +73,11 @@
 
   @media (min-width: $medium-screen) {
     margin-bottom: 85px;
+  }
+
+  @media (min-width: $large-screen) {
+    justify-content: flex-start;
+    margin-bottom: 60px;
   }
 }
 
@@ -57,6 +95,11 @@
     margin-right: 42px;
     margin-bottom: 0;
     padding: 15px 10px 20px;
+  }
+
+  @media (min-width: $large-screen) {
+    max-width: 162px;
+    margin-bottom: 55px;
   }
 }
 
@@ -89,6 +132,10 @@
     font-size: 14px;
     background-color: #ffffff;
   }
+
+  @media (min-width: $large-screen) {
+    background-color: $l-grey-1;
+  }
 }
 
 .example__cost {
@@ -104,5 +151,19 @@
     width: 24.7%;
     margin-left: auto;
     text-align: right;
+
+    & span {
+      display: block;
+    }
+  }
+
+  @media (min-width: $large-screen) {
+    min-width: 100%;
+    text-align: left;
+
+    & span {
+      display: inline-block;
+      width: 60px;
+    }
   }
 }
