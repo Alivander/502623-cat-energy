@@ -13,4 +13,8 @@
     color: $d-grey-3;
     background-color: $l-grey-1;
   }
+
+  @media (min-width: $medium-screen) {
+    padding: 8px 27px;
+  }
 }
