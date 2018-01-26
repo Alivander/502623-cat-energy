@@ -1,10 +1,18 @@
 .details {
+  @include container;
+  max-width: $large-screen;
+  margin: 0 auto;
   padding-top: 3px;
   padding-bottom: 20px;
 
   @media (min-width: $medium-screen) {
     padding-top: 30px;
     padding-bottom: 10px;
+  }
+
+  @media (min-width: $large-screen) {
+    padding-top: 60px;
+    padding-bottom: 0;
   }
 }
 
@@ -17,8 +25,8 @@
 }
 
 .details__list {
-  @include container;
   margin: 0;
+  padding: 0;
   list-style: none;
 
   @media (min-width: $medium-screen) {
@@ -26,6 +34,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     border-bottom: 1px solid $l-grey-2;
+  }
+
+  @media (min-width: $large-screen) {
+    border: none;
   }
 }
 
@@ -61,5 +73,11 @@
       height: 80px;
       margin-bottom: 32px;
     }
+  }
+
+  @media (min-width: $large-screen) {
+    max-width: 245px;
+    margin-bottom: 0;
+    padding-right: 0;
   }
 }
