@@ -1,15 +1,20 @@
 .page {
-  &--back {
-    // будет добавлять зеленый фон на экранах побольше
+
+  @media (min-width: $large-screen) {
+
+    &--back {
+      background-image: linear-gradient(to right, transparent 0%, transparent 52.7%, $green-1 52.7%, $green-1 100%);
+      background-position: center top;
+      background-size: 100% 695px;
+      background-repeat: no-repeat;
+    }
   }
 }
 
 .page__title {
-  @include container;
   @include font(36px, 60px);
   margin: 0;
-  padding-top: 15px;
-  padding-bottom: 25px;
+  padding: 15px 0 25px;
   color: $d-grey-3;
 
   &--white {
@@ -17,10 +22,6 @@
 
     @media (min-width: $medium-screen) {
       color: $d-grey-3;
-    }
-
-    @media (min-width: $large-screen) {
-      color: #ffffff;
     }
   }
 
@@ -46,5 +47,12 @@
     min-width: 40px;
     height: 3px;
     background-color: $green-1;
+  }
+}
+
+.page__main {
+
+  &--inner {
+    max-width: $large-screen;
   }
 }
