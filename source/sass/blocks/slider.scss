@@ -1,5 +1,4 @@
 .slider {
-  @include container;
 
   @media (min-width: $medium-screen) {
     padding-bottom: 50px;
@@ -7,6 +6,12 @@
     background-position: center bottom;
     background-size: 100% calc(100% - 170px);
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: $large-screen) {
+    flex-shrink: 0;
+    width: 690px;
+    background-size: 100% calc(100% - 205px);
   }
 }
 
@@ -18,6 +23,10 @@
   @media (min-width: $medium-screen) {
     min-height: 517px;
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 40px;
   }
 }
 
@@ -39,6 +48,10 @@
   align-items: center;
   margin: 0;
   margin-bottom: 18px;
+
+  @media (min-width: $large-screen) {
+    padding-left: 37px;
+  }
 }
 
 .slider__before,
