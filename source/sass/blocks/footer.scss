@@ -1,6 +1,14 @@
 .footer {
-  flex-wrap: wrap;
   background-color: $l-grey-1;
+}
+
+.footer__top {
+  position: relative;
+  width: 100%;
+}
+
+.footer__bottom {
+  @include container;
 
   @media (min-width: $medium-screen) {
     display: flex;
@@ -10,8 +18,6 @@
 }
 
 .footer__partners {
-  display: flex;
-  width: 100%;
   margin: 0 auto;
   padding: 28px 20px 25px;
 
@@ -22,6 +28,27 @@
   @media (min-width: $medium-screen) {
     justify-content: space-between;
     padding: 47px 70px 56px;
+  }
+
+  @media (min-width: $large-screen) {
+    max-width: $large-screen - 80px;
+    padding: 95px 0 103px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+
+  @media (min-width: $medium-screen) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: $large-screen) {
+    position: relative;
+    z-index: 1;
+    width: 570px;
+    padding: 65px 85px 58px 75px;
+    background-color: #ffffff;
   }
 }
 
@@ -51,11 +78,22 @@
       line-height: 40px;
     }
   }
+
+  @media (min-width: $large-screen) {
+    text-align: left;
+  }
 }
 
 .footer__map {
-  width: 100%;
   margin: 0;
+
+  @media (min-width: $large-screen) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .footer__static-map {
@@ -67,10 +105,14 @@
   @media (min-width: $medium-screen) {
     height: 396px;
   }
+
+  @media (min-width: $large-screen) {
+    height: 100%;
+  }
 }
 
 .footer__name {
-  margin: 0 20px;
+  margin: 0;
   padding: 40px 0 28px;
   border-bottom: 1px solid $l-grey-3;
 
@@ -82,9 +124,8 @@
   }
 
   @media (min-width: $medium-screen) {
-    width: 223px;
-    margin: 0;
-    padding: 63px 0 63px 30px;
+    width: 160px;
+    padding: 63px 0;
     border: none;
 
     & img {
@@ -94,12 +135,10 @@
 }
 
 .footer__social {
-  margin: 0 20px;
-  padding: 19px 0;
+  padding: 21px 0 19px;
   border-bottom: 1px solid $l-grey-3;
 
   @media (min-width: $medium-screen) {
-    margin: 0;
     padding: 0;
     border: none;
   }
@@ -110,14 +149,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
   padding: 20px 0 22px;
   font-family: "Arial", sans-serif;
 
   @media (min-width: $medium-screen) {
-    width: 223px;
-    margin: 0;
+    width: 163px;
     margin-top: 20px;
-    padding-right: 30px;
+  }
+
+  @media (min-width: $large-screen) {
+    margin-top: 0;
   }
 }
