@@ -1,3 +1,18 @@
+.navigation {
+
+  @media (min-width: $medium-screen) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 30px;
+  }
+
+  @media (min-width: $large-screen) {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+}
+
 .navigation__toggle {
   @include button-reset;
   position: absolute;
@@ -9,20 +24,53 @@
   background-position: center;
   background-size: 28px 18px;
   background-repeat: no-repeat;
+
+  @media (min-width: $medium-screen) {
+    display: none;
+  }
 }
 
 .navigation__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $medium-screen) {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
 }
 
 .navigation__item {
   @include font(20px, 20px, 500);
+  flex-shrink: 0;
   min-height: 66px;
   padding: 22.5px 20px;
   text-align: center;
   text-transform: uppercase;
   color: $d-grey-3;
   border-bottom: 1px solid $l-grey-2;
+
+  @media (min-width: $medium-screen) {
+    @include font(18px, 25px);
+    min-height: auto;
+    margin-left: 35px;
+    padding: 0;
+    color: $d-grey-2;
+    border: none;
+  }
+}
+
+.navigation__link {
+
+  @media (min-width: $medium-screen) {
+    padding: 7px 0;
+    border-bottom: 2px solid transparent;
+
+    &--current {
+      border-bottom-color: $green-1;
+    }
+  }
 }
