@@ -1,4 +1,6 @@
 .navigation {
+  max-width: $large-screen;
+  margin: 0 auto;
 
   @media (min-width: $medium-screen) {
     display: flex;
@@ -8,8 +10,7 @@
   }
 
   @media (min-width: $large-screen) {
-    padding-right: 110px;
-    padding-left: 110px;
+    padding: 52px 40px 25px;
   }
 }
 
@@ -61,6 +62,11 @@
     color: $d-grey-2;
     border: none;
   }
+
+  @media (min-width: $large-screen) {
+    @include font(20px, 25px);
+    color: #ffffff;
+  }
 }
 
 .navigation__link {
@@ -71,6 +77,13 @@
 
     &--current {
       border-bottom-color: $green-1;
+    }
+  }
+
+  @media (min-width: $large-screen) {
+
+    &--current {
+      border-bottom-color: #ffffff;
     }
   }
 }
