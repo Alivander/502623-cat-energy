@@ -5,6 +5,11 @@
   @media (min-width: $medium-screen) {
     padding-top: 0;
   }
+
+  @media (min-width: $large-screen) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .programs__variant {
@@ -30,6 +35,23 @@
       padding-right: 315px;
     }
   }
+
+  @media (min-width: $large-screen) {
+    max-width: 570px;
+    padding-top: 47px;
+
+    &:first-of-type {
+      margin-bottom: 0;
+    }
+
+    &--slim {
+      padding-right: 53px;
+    }
+
+    &--pro {
+      padding-right: 53px;
+    }
+  }
 }
 
 .programs__heading {
@@ -46,6 +68,11 @@
     padding: 0;
     font-size: 36px;
   }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 45px;
+    padding: 28px 0 28px 160px;
+  }
 }
 
 .programs__description {
@@ -58,6 +85,10 @@
   @media (min-width: $medium-screen) {
     margin-bottom: 37px;
     border: none;
+  }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 12px;
   }
 }
 
