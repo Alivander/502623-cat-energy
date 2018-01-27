@@ -19,22 +19,26 @@
 
   &--white {
     color: #ffffff;
+  }
 
-    @media (min-width: $medium-screen) {
-      color: $d-grey-3;
-    }
+  &--top {
+    @include container;
   }
 
   @media (min-width: $medium-screen) {
     font-size: 60px;
+
+    &--white {
+      color: $d-grey-3;
+    }
   }
 }
 
 .page__sub-title {
   @include font(24px, 24px);
+  position: relative;
   display: flex;
   margin: 0;
-  padding: 0;
   padding-bottom: 33px;
   color: $d-grey-3;
 
@@ -48,11 +52,59 @@
     height: 3px;
     background-color: $green-1;
   }
+
+  @media (min-width: $medium-screen) {
+    @include font(36px, 36px);
+
+    &::before {
+      content: "";
+      position: relative;
+      flex-grow: 0;
+      top: 22px;
+      left: -30px;
+      width: 30px;
+      height: 3px;
+      margin-right: 7px;
+      background-color: $green-1;
+    }
+
+    &::after {
+      top: 22px;
+      right: -30px;
+      margin-left: 7px;
+    }
+  }
+
+  @media (min-width: $large-screen) {
+
+    &::before {
+      position: absolute;
+      left: -110px;
+      width: 70px;
+    }
+
+    &::after {
+      transform-origin: left top;
+      transform: scaleX(1.1);
+    }
+  }
 }
 
 .page__main {
 
-  &--inner {
-    max-width: $large-screen;
+  @media (min-width: $medium-screen) {
+
+    &--inner {
+      padding-top: 15px;
+    }
+  }
+
+  @media (min-width: $large-screen) {
+
+    &--inner {
+      margin: 0 auto;
+      padding-top: 30px;
+      max-width: $large-screen;
+    }
   }
 }
