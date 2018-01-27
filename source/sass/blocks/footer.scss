@@ -19,7 +19,7 @@
 
 .footer__partners {
   margin: 0 auto;
-  padding: 28px 20px 25px;
+  padding: 28px 20px 26px;
 
   &--white {
     background-color: #ffffff;
@@ -27,7 +27,7 @@
 
   @media (min-width: $medium-screen) {
     justify-content: space-between;
-    padding: 47px 70px 56px;
+    padding: 66px 70px 55px;
   }
 
   @media (min-width: $large-screen) {
@@ -113,7 +113,7 @@
 
 .footer__name {
   margin: 0;
-  padding: 40px 0 28px;
+  padding: 38px 0 30px;
   border-bottom: 1px solid $l-grey-3;
 
   & img {
@@ -135,7 +135,7 @@
 }
 
 .footer__social {
-  padding: 21px 0 19px;
+  padding: 20px 0 19px;
   border-bottom: 1px solid $l-grey-3;
 
   @media (min-width: $medium-screen) {
