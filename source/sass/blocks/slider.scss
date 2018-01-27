@@ -1,7 +1,7 @@
 .slider {
 
   @media (min-width: $medium-screen) {
-    padding-bottom: 50px;
+    padding: 0 45px 50px;
     background-image: linear-gradient(to right, $l-grey-1 0%, $l-grey-1 50%, $l-grey-2 50%, $l-grey-2 100%);
     background-position: center bottom;
     background-size: 100% calc(100% - 170px);
@@ -11,6 +11,7 @@
   @media (min-width: $large-screen) {
     flex-shrink: 0;
     width: 690px;
+    padding: 0 0 50px;
     background-size: 100% calc(100% - 205px);
   }
 }
