@@ -1,7 +1,7 @@
 .slider {
 
   @media (min-width: $medium-screen) {
-    padding: 0 45px 50px;
+    padding: 0 45px 48px;
     background-image: linear-gradient(to right, $l-grey-1 0%, $l-grey-1 50%, $l-grey-2 50%, $l-grey-2 100%);
     background-position: center bottom;
     background-size: 100% calc(100% - 170px);
@@ -12,14 +12,14 @@
     flex-shrink: 0;
     width: 690px;
     padding: 0 0 50px;
-    background-size: 100% calc(100% - 205px);
+    background-size: 100% calc(100% - 208px);
   }
 }
 
 .slider__content {
   position: relative;
   min-height: 248px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 
   @media (min-width: $medium-screen) {
     min-height: 517px;
