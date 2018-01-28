@@ -1,4 +1,7 @@
 .promo {
+  @include container;
+  position: relative;
+  z-index: 1;
   padding: 27px 20px 0;
   text-align: center;
   color: #ffffff;
@@ -8,20 +11,86 @@
   background-position: center top;
   background-size: 100% auto;
   background-repeat: no-repeat;
+
+  @media (min-width: $medium-screen) {
+    padding-top: 30px;
+    font-size: 20px;
+    text-align: left;
+    color: $d-grey-3;
+    background-image: none;
+  }
+
+  @media (min-width: $large-screen) {
+    min-height: 553px;
+    margin-bottom: 80px;
+    padding: 80px 120px 0;
+  }
 }
 
 .promo__heading {
   margin-bottom: 23px;
-  padding: 0;
   line-height: 1;
-  text-align: center;
+  color: inherit;
+
+  @media (min-width: $medium-screen) {
+    margin: 0 87px 40px;
+  }
+
+  @media (min-width: $large-screen) {
+    margin: 0 0 40px;
+    padding-left: 0;
+    max-width: 570px;
+  }
 }
 
 .promo__slogan {
-  margin-bottom: 27px;
+  margin-bottom: 29px;
   text-transform: uppercase;
+
+  @media (min-width: $medium-screen) {
+    margin-bottom: 16px;
+    padding: 0 87px;
+  }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 50px;
+    padding-left: 0;
+  }
+}
+
+.promo__image {
+  display: block;
+  width: 280px;
+  height: 271px;
+
+  @media (min-width: $medium-screen) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: $large-screen) {
+    position: absolute;
+    top: 0;
+    right: 258px;
+    z-index: -1;
+    width: 552px;
+    height: 499px;
+  }
 }
 
 .promo__button {
-  font-size: 14px;
+  font-size: inherit;
+
+  @media (min-width: $medium-screen) {
+    position: absolute;
+    bottom: 532px;
+    left: 117px;
+    width: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  @media (min-width: $large-screen) {
+    position: static;
+  }
 }

@@ -1,13 +1,56 @@
 .programs {
-  padding: 22px 20px 0;
+  @include container;
+  padding-top: 22px;
+
+  @media (min-width: $medium-screen) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $large-screen) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .programs__variant {
-  padding: 22px 20px;
+  padding: 22px 20px 20px;
   background-color: $l-grey-1;
 
   &:first-of-type {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $medium-screen) {
+    padding: 78px 53px 57px;
+
+    &:first-of-type {
+      margin-bottom: 30px;
+    }
+
+    &--slim {
+      padding-right: 280px;
+    }
+
+    &--pro {
+      padding-right: 315px;
+    }
+  }
+
+  @media (min-width: $large-screen) {
+    max-width: 570px;
+    padding-top: 47px;
+
+    &:first-of-type {
+      margin-bottom: 0;
+    }
+
+    &--slim {
+      padding-right: 53px;
+    }
+
+    &--pro {
+      padding-right: 53px;
+    }
   }
 }
 
@@ -19,14 +62,34 @@
   padding: 8px 0 8px 72px;
   color: $d-grey-3;
   text-transform: uppercase;
+
+  @media (min-width: $medium-screen) {
+    margin-bottom: 24px;
+    padding: 0;
+    font-size: 36px;
+  }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 45px;
+    padding: 28px 0 28px 160px;
+  }
 }
 
 .programs__description {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   padding-bottom: 20px;
   font-family: "Arial", sans-serif;
   border-bottom: 1px solid $l-grey-3;
+
+  @media (min-width: $medium-screen) {
+    margin-bottom: 37px;
+    border: none;
+  }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 12px;
+  }
 }
 
 .programs__link {
@@ -34,4 +97,8 @@
   position: relative;
   text-transform: uppercase;
   color: $d-grey-3;
+
+  @media (min-width: $medium-screen) {
+    font-size: 20px;
+  }
 }

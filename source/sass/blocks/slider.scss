@@ -1,24 +1,74 @@
+.slider {
+  @media (min-width: $medium-screen) {
+    padding: 0 45px 48px;
+    background-image: linear-gradient(to right, $l-grey-1 0%, $l-grey-1 50%, $l-grey-2 50%, $l-grey-2 100%);
+    background-position: center bottom;
+    background-size: 100% calc(100% - 170px);
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $large-screen) {
+    flex-shrink: 0;
+    width: 690px;
+    padding: 0 0 50px;
+    background-size: 100% calc(100% - 208px);
+  }
+}
+
 .slider__content {
   position: relative;
-  margin-bottom: 20px;
+  min-height: 248px;
+  margin-bottom: 25px;
+
+  @media (min-width: $medium-screen) {
+    min-height: 517px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 40px;
+  }
 }
 
 .slider__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+
   &:not(:first-of-type) {
     display: none;  // временно
   }
 }
 
 .slider__control {
-  @include font(16px, 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   margin-bottom: 18px;
+
+  @media (min-width: $large-screen) {
+    padding-left: 37px;
+  }
+}
+
+.slider__before,
+.slider__after {
+  @include font(16px, 20px);
   text-align: center;
   text-transform: uppercase;
   color: $d-grey-3;
+
+  @media (min-width: $medium-screen) {
+    padding-bottom: 5px;
+    font-size: 20px;
+    border-bottom: 1px solid $l-grey-3;
+  }
 }
 
-.slider__toggle {
+.slider__range {
   position: relative;
   display: inline-block;
   width: 84px;
@@ -27,23 +77,49 @@
   background-color: #ffffff;
   border: 1px solid $l-grey-3;
   border-radius: 7px;
+
+  @media (min-width: $medium-screen) {
+    width: 428px;
+    height: 6px;
+    margin: 0 22px;
+    background-color: $l-grey-3;
+    border: none;
+    border-radius: none;
+  }
+}
+
+.slider__toggle {
+  position: absolute;
+  top: 3px;
+  width: 35px;
+  height: 6px;
+  background-color: $green-1;
+  border-radius: 3px;
   cursor: pointer;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    width: 35px;
-    height: 6px;
-    background-color: $green-1;
-    border-radius: 3px;
-  }
-
-  &--before::before {
+  &--before {
     left: 5px;
   }
 
-  &--after::before {
+  &--after {
     right: 5px;
+  }
+
+  @media (min-width: $medium-screen) {
+    top: -14px;
+    width: 34px;
+    height: 34px;
+    background-color: $green-1;
+    border: 13px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    &--before {
+      left: 0;
+    }
+
+    &--after {
+      right: 0;
+    }
   }
 }

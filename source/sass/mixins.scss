@@ -12,3 +12,21 @@
   box-shadow: none;
   cursor: pointer;
 }
+
+@mixin container {
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: $medium-screen) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $large-screen) {
+    max-width: $large-screen;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}

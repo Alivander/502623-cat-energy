@@ -1,12 +1,54 @@
 .related {
-  padding: 28px 20px 20px;
+  @include container;
+  padding-top: 28px;
+  padding-bottom: 35px;
+
+  @media (min-width: $medium-screen) {
+    padding-top: 64px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: $large-screen) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 73px;
+    padding-bottom: 84px;
+  }
+}
+
+.related__heading {
+  margin-bottom: 34px;
+
+  @media (min-width: $large-screen) {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 80px;
+  }
 }
 
 .related__products {
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   list-style: none;
   border-top: 1px solid $l-grey-3;
+
+  @media (min-width: $medium-screen) {
+    margin-bottom: 70px;
+    padding-top: 47px;
+    border: none;
+  }
+
+  @media (min-width: $large-screen) {
+    width: 895px;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $l-grey-3;
+  }
 }
 
 .related__item {
@@ -15,15 +57,43 @@
   flex-wrap: wrap;
   padding: 15px 0 16px;
   border-bottom: 1px solid $l-grey-3;
+
+  @media (min-width: $medium-screen) {
+    align-items: baseline;
+    padding: 25px 38px 26px;
+    border: 1px solid $l-grey-2;
+  }
+
+  @media (min-width: $large-screen) {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 15.5px 0;
+    border: none;
+    border-bottom: 1px solid $l-grey-3;
+  }
 }
 
 .related__title {
-  @include font(16px, 16px);
+  @include font(16px, 1);
   width: 100%;
   margin: 0;
   margin-bottom: 10px;
   text-transform: uppercase;
   color: $d-grey-2;
+
+  @media (min-width: $medium-screen) {
+    width: 50%;
+    margin-bottom: 26px;
+    flex-grow: 1;
+    font-size: 20px;
+  }
+
+  @media (min-width: $large-screen) {
+    flex-grow: 0;
+    width: 325px;
+    margin: 0;
+    padding-right: 40px;
+  }
 }
 
 .related__count,
@@ -31,4 +101,32 @@
   max-width: 50%;
   margin-bottom: 13px;
   font-family: "Arial", sans-serif;
+
+  @media (min-width: $medium-screen) {
+    margin: 0;
+    margin-left: 50px;
+  }
+
+  @media (min-width: $large-screen) {
+    margin: 0;
+    padding-right: 20px;
+  }
+}
+
+.related__count {
+  @media (min-width: $large-screen) {
+    width: 245px;
+  }
+}
+
+.related__price {
+  @media (min-width: $large-screen) {
+    width: 80px;
+  }
+}
+
+.related__button {
+  @media (min-width: $large-screen) {
+    width: 245px;
+  }
 }

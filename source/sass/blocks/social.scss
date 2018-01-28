@@ -7,7 +7,11 @@
 }
 
 .social__network {
-  margin: 0 14px;
+  margin: 0 15.5px;
+
+  @media (min-width: $medium-screen) {
+    margin: 0 12px;
+  }
 }
 
 .social__link {
@@ -17,4 +21,9 @@
   background-image: url("http://placehold.it/25x25");
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-width: $medium-screen) {
+    width: 30px;
+    height: 30px;
+  }
 }
