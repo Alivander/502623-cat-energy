@@ -23,7 +23,7 @@
   }
 
   @media (min-width: $large-screen) {
-    width: $large-screen;
+    max-width: $large-screen;
     margin-right: auto;
     margin-left: auto;
     padding-right: 40px;
