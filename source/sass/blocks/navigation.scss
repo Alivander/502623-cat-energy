@@ -1,5 +1,4 @@
 .navigation {
-
   @media (min-width: $medium-screen) {
     display: flex;
     justify-content: space-between;
@@ -65,7 +64,6 @@
 }
 
 .navigation__link {
-
   @media (min-width: $medium-screen) {
     padding: 7px 0;
     border-bottom: 2px solid transparent;

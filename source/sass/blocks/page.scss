@@ -1,7 +1,5 @@
 .page {
-
   &--index {
-
     & .page__main {
       padding: 0;
     }
@@ -16,7 +14,6 @@
   }
 
   @media (min-width: $large-screen) {
-
     &--index {
       background-image: linear-gradient(to right, transparent 0%, transparent 52.7%, $green-1 52.7%, $green-1 100%);
       background-position: center top;
@@ -119,7 +116,6 @@
   }
 
   @media (min-width: $large-screen) {
-
     &::before {
       position: absolute;
       left: -110px;

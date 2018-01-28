@@ -40,13 +40,13 @@
   height: 18px;
   margin: 0 auto;
 
-  @media (min-width: $medium-screen)  {
+  @media (min-width: $medium-screen) {
     width: 84px;
     height: 15px;
     margin: 0;
   }
 
-  @media (min-width: $large-screen)  {
+  @media (min-width: $large-screen) {
     width: 119px;
     height: 22px;
   }
