@@ -8,7 +8,7 @@
   </head>
   <body class="page">
 
-    <header class="header">
+    <header class="page__header">
 
       <nav class="navigation">
 
@@ -37,84 +37,88 @@
 
     </header>
 
-    <main class="page__main page__main--inner">
+    <main class="page__main">
 
       <h2 class="page__title">Подбор программы</h2>
 
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
 
-        <p class="form__info">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <p class="form__info">Заполните анкету и мы подберем <br>программу питания для вашего кота</p>
 
-        <fieldset class="form__fieldset form__fieldset--border">
-          <label class="form__field">
+        <fieldset class="form__fieldset form__fieldset--parameters">
+          <label class="field form__field">
             Имя:*
-            <input class="form__input" type="text" name="name" placeholder="Барсик" required>
+            <input class="field__input" type="text" name="name" placeholder="Барсик" required>
           </label>
-          <label class="form__field">
+          <label class="field form__field">
             Вес (кг):*
-            <input class="form__input" type="text" name="weight" placeholder="7" required>
+            <input class="field__input" type="text" name="weight" placeholder="7" required>
           </label>
-          <label class="form__field">
+          <label class="field form__field">
             Возраст (лет):
-            <input class="form__input" type="text" name="age" placeholder="7">
+            <input class="field__input" type="text" name="age" placeholder="7">
           </label>
         </fieldset>
 
-        <fieldset class="form__fieldset form__fieldset--border">
-          <label class="form__field">
+        <fieldset class="form__fieldset form__fieldset--programs">
+          <label class="field form__field">
             <input class="visually-hidden" type="radio" name="program" value="slim" checked>
-            <span class="form__value">Похудение</span>
+            <span class="field__text">Похудение</span>
           </label>
-          <label class="form__field">
+          <label class="field form__field">
             <input class="visually-hidden" type="radio" name="program" value="pro">
-            <span class="form__value">Набор массы</span>
+            <span class="field__text">Набор массы</span>
           </label>
-          <label class="form__field">
+          <label class="field form__field">
             <input class="visually-hidden" type="radio" name="program" value="advice">
-            <span class="form__value">Не знаю (нужен ваш совет)</span>
+            <span class="field__text">Не знаю (нужен ваш совет)</span>
           </label>
         </fieldset>
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--contacts">
           <p class="page__sub-title form__legend">Контактные данные <br>(владельца кота)</p>
-          <label class="form__field">
+          <label class="field form__field">
             E-mail:*
-            <input class="form__input form__input--email" type="email" name="age" placeholder="kuklachev@gmail.com" required>
+            <input class="field__input field__input--email" type="email" name="age" placeholder="kuklachev@gmail.com" required>
           </label>
-          <label class="form__field">
+          <label class="field form__field">
             Телефон:*
-            <input class="form__input" type="tel" name="age" placeholder="8 (960) 900-60-90" required>
+            <input class="field__input field__input--tel" type="tel" name="age" placeholder="8 (960) 900-60-90" required>
           </label>
         </fieldset>
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset-comment">
           <p class="page__sub-title form__legend">Комментарий</p>
-          <textarea class="form__comment">Расскажите обо всех повадках кота</textarea>
+          <label class="field form__field">
+            <span class="visually-hidden">Расскажите обо всех повадках кота</span>
+            <textarea class="field__textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </label>
         </fieldset>
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--additionally">
           <p class="page__sub-title form__legend">Дополнительно</p>
-          <label class="form__field">
+          <label class="field form__field">
             <input class="visually-hidden" type="checkbox" name="sweetener" checked>
-            <span class="form__value">Сахарозаменитель</span>
+            <span class="field__text">Сахарозаменитель</span>
           </label>
-          <label class="form__field">
+          <label class="field form__field">
             <input class="visually-hidden" type="checkbox" name="water">
-            <span class="form__value">Питьевая вода</span>
+            <span class="field__text">Питьевая вода</span>
           </label>
-          <label class="form__field">
+          <label class="field form__field">
             <input class="visually-hidden" type="checkbox" name="milk">
-            <span class="form__value">Молоко</span>
+            <span class="field__text">Молоко</span>
           </label>
-          <label class="form__field">
+          <label class="field form__field">
             <input class="visually-hidden" type="checkbox" name="vitamins">
-            <span class="form__value">Витамины</span>
+            <span class="field__text">Витамины</span>
           </label>
         </fieldset>
 
-        <button class="button form__submit" type="submit">Отправить заявку</button>
-
-        <span class="form__note">* — Обязательные поля</span>
+        <div class="form__footer">
+          <button class="button form__submit" type="submit">Отправить заявку</button>
+          <span class="form__note">* — Обязательные поля</span>
+        </div>
 
       </form>
 
@@ -122,22 +126,22 @@
 
     <footer class="footer">
 
-      <div class="footer__top">
+      <section class="contacts">
 
-        <p class="footer__partners">
-          <span class="footer__wrapper">
-            <b class="footer__invite">Приглашаем <br>к сотрудничеству дилеров!</b>
-            <span class="footer__address">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</span>
+        <p class="contacts__partners">
+          <span class="contacts__card">
+            <b class="contacts__invite">Приглашаем <br>к сотрудничеству дилеров!</b>
+            <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</span>
           </span>
         </p>
 
-        <p class="footer__map">
-          <img class="footer__static-map" src="http://placehold.it/320x362" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+        <p class="contacts__map">
+          <img class="contacts__static-map" src="http://placehold.it/320x362" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
         </p>
 
-      </div>
+      </section>
 
-      <div class="footer__bottom">
+      <section class="footer__bottom">
 
         <p class="footer__name">
           <img src="http://placehold.it/128x24" width="128" height="24" alt="Cat Energy">
@@ -166,7 +170,7 @@
           <img class="footer__logo-author" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
         </a>
 
-      </div>
+      </section>
 
     </footer>
 
