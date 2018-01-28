@@ -1,10 +1,10 @@
 .example {
-  padding-top: 3px;
+  padding-top: 20px;
   padding-bottom: 18px;
   background-color: $l-grey-1;
 
   @media (min-width: $medium-screen) {
-    padding-top: 17px;
+    padding-top: 22px;
     padding-bottom: 0;
     background: none;
   }
@@ -14,43 +14,42 @@
     justify-content: center;
     padding-top: 5px;
     padding-bottom: 0;
-    background-image: linear-gradient(to bottom, transparent 0%, transparent 210px, $l-grey-1 210px, $l-grey-1 100%);
+    background-image: linear-gradient(to right, $l-grey-1 0%, $l-grey-1 50%, $l-grey-2 50%, $l-grey-2 100%);
     background-position: center bottom;
-    background-size: 100%;
+    background-size: 100% calc(100% - 213px);
     background-repeat: no-repeat;
   }
 }
 
-.example__wrapper {
-  padding-right: 20px;
-  padding-left: 20px;
+.example__text {
+  padding: 0 20px;
 
   @media (min-width: $medium-screen) {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 0 30px;
   }
 
   @media (min-width: $large-screen) {
     flex-shrink: 0;
     width: 610px;
-    padding: 57px 0 0 40px;
+    padding: 73px 0 0 40px;
   }
 }
 
 .example__heading {
+  margin-bottom: 23px;
 
   @media (min-width: $medium-screen) {
-    margin-bottom: 38px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: $large-screen) {
-    margin-bottom: 120px;
+    margin-bottom: 145px;
   }
 }
 
 .example__description {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   font-family: "Arial", sans-serif;
 
   @media (min-width: $medium-screen) {
@@ -69,7 +68,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 36px;
   list-style: none;
 
   @media (min-width: $medium-screen) {
