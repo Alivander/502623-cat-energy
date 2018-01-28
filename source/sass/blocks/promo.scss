@@ -29,22 +29,22 @@
 
 .promo__heading {
   margin-bottom: 23px;
-  padding: 0;
   line-height: 1;
+  color: inherit;
 
   @media (min-width: $medium-screen){
-    margin-bottom: 40px;
-    padding: 0 87px;
+    margin: 0 87px 40px;
   }
 
   @media (min-width: $large-screen) {
+    margin: 0 0 40px;
     padding-left: 0;
-    max-width: 600px;
+    max-width: 570px;
   }
 }
 
 .promo__slogan {
-  margin-bottom: 27px;
+  margin-bottom: 29px;
   text-transform: uppercase;
 
   @media (min-width: $medium-screen){
