@@ -1,18 +1,4 @@
 .bonus {
-  padding: 40px 0 17px;
-
-  @media (min-width: $medium-screen) {
-    padding: 70px 0 57px;
-  }
-
-  @media (min-width: $large-screen) {
-    display: flex;
-    width: 245px;
-    padding: 0;
-  }
-}
-
-.bonus__info {
   margin: 0;
   padding: 65px 55px 45px;
   font-family: "Arial", sans-serif;
@@ -47,9 +33,8 @@
   }
 
   @media (min-width: $large-screen) {
-    flex-grow: 1;
     display: block;
-    margin: 0;
+    width: 245px;
     padding: 65px 30px 45px;
     text-align: center;
 
