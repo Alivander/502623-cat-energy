@@ -96,8 +96,47 @@
 .programs__link {
   @include font(16px, 16px);
   position: relative;
+  padding-right: 60px;
   text-transform: uppercase;
   color: $d-grey-3;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12.5px;
+    right: 13px;
+    width: 22px;
+    height: 2px;
+    background-color: $d-grey-3;
+    transition-duration: 0.3s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: 5.5px solid transparent;
+    border-right: none;
+    border-left: 7px solid $d-grey-3;
+    transition-duration: 0.3s;
+  }
+
+  &:focus,
+  &:hover {
+    &::before {
+      right: 3px;
+      width: 32px;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $medium-screen) {
     font-size: 20px;
