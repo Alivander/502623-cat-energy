@@ -8,7 +8,7 @@
   </head>
   <body class="page page--index">
 
-    <header class="page__header">
+    <header class="page__header page__container">
 
       <nav class="navigation">
 
@@ -37,7 +37,7 @@
 
     </header>
 
-    <main class="page__main">
+    <main class="page__container">
 
       <section class="promo">
         <h1 class="page__title promo__heading">Функциональное питание для котов</h1>
@@ -83,40 +83,51 @@
 
       <section class="example">
 
-        <div class="example__text">
+        <div class="example__wrapper">
 
-          <h2 class="page__title example__heading">Живой пример</h2>
+          <div class="example__text">
 
-          <p class="example__description">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
+            <h2 class="page__title example__heading">Живой пример</h2>
 
-          <p class="example__resume">
-            <span class="example__result">
-              <b class="example__count">5 кг</b>
-              <span class="example__sub">снижение веса</span>
-            </span>
-            <span class="example__result">
-              <b class="example__count">60 дней</b>
-              <span class="example__sub">затрачено времени</span>
-            </span>
-            <span class="example__cost">Затраты на питание: <span></span>15 000 руб.</span>
-          </p>
+            <p class="example__description">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
 
-        </div>
+            <p class="example__resume">
+              <span class="example__result">
+                <b class="example__count">5 кг</b>
+                <span class="example__sub">снижение веса</span>
+              </span>
+              <span class="example__result">
+                <b class="example__count">60 дней</b>
+                <span class="example__sub">затрачено времени</span>
+              </span>
+              <span class="example__cost">Затраты на питание: <span></span>15 000 руб.</span>
+            </p>
 
-        <div class="slider example__slider">
-          <p class="slider__content">
-            <img class="slider__image" src="http://placehold.it/320x248" width="320" height="248" alt="Борис до замены корма - толстый кот">
-            <img class="slider__image" src="http://placehold.it/320x248" width="320" height="248" alt="Борис после замены корма - худой кот">
-          </p>
-          <p class="slider__control">
-            <span class="slider__before">Было</span>
-            <span class="slider__range">
-              <span class="slider__toggle slider__toggle--before"></span>
-            </span>
-            <span class="slider__after">Стало</span>
-          </p>
+          </div>
+
+          <div class="slider example__slider">
+            <input class="visually-hidden" id="slider-toggle-before" type="radio" name="slider-toggle" checked>
+            <input class="visually-hidden" id="slider-toggle-after" type="radio" name="slider-toggle">
+            <p class="slider__content">
+              <img class="slider__image slider__image--before" src="http://placehold.it/320x248" width="320" height="248" alt="Борис до замены корма - толстый кот">
+              <img class="slider__image slider__image--after" src="http://placehold.it/320x248" width="320" height="248" alt="Борис после замены корма - худой кот">
+            </p>
+            <p class="slider__control">
+              <span class="slider__text slider__text--before">Было</span>
+              <span class="slider__range">
+                <label class="slider__toggle slider__toggle--before" for="slider-toggle-before">
+                  <span class="visually-hidden">Было</span>
+                </label>
+                <label class="slider__toggle slider__toggle--after" for="slider-toggle-after">
+                  <span class="visually-hidden">Стало</span>
+                </label>
+              </span>
+              <span class="slider__text slider__text--after">Стало</span>
+            </p>
+          </div>
+
         </div>
 
       </section>
@@ -127,7 +138,7 @@
 
       <section class="contacts">
 
-        <p class="contacts__partners">
+        <p class="contacts__partners page__container">
           <span class="contacts__card">
             <b class="contacts__invite">Приглашаем <br>к сотрудничеству дилеров!</b>
             <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</span>
@@ -140,7 +151,7 @@
 
       </section>
 
-      <section class="footer__bottom">
+      <section class="footer__bottom page__container">
 
         <p class="footer__name">
           <img src="http://placehold.it/128x24" width="128" height="24" alt="Cat Energy">

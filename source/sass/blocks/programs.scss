@@ -1,12 +1,13 @@
 .programs {
-  @include container;
-  padding-top: 22px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @media (min-width: $medium-screen) {
     padding-top: 0;
   }
 
   @media (min-width: $large-screen) {
+    padding-top: 30px;
     display: flex;
     justify-content: space-between;
   }

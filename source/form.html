@@ -8,7 +8,7 @@
   </head>
   <body class="page">
 
-    <header class="page__header">
+    <header class="page__header page__container">
 
       <nav class="navigation">
 
@@ -37,46 +37,51 @@
 
     </header>
 
-    <main class="page__main">
+    <main class="page__main page__container">
 
-      <h2 class="page__title">Подбор программы</h2>
+      <h1 class="page__title">Подбор программы</h1>
 
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
 
         <p class="form__info">Заполните анкету и мы подберем <br>программу питания для вашего кота</p>
 
-        <fieldset class="form__fieldset form__fieldset--parameters">
-          <label class="field form__field">
-            Имя:*
-            <input class="field__input" type="text" name="name" placeholder="Барсик" required>
-          </label>
-          <label class="field form__field">
-            Вес (кг):*
-            <input class="field__input" type="text" name="weight" placeholder="7" required>
-          </label>
-          <label class="field form__field">
-            Возраст (лет):
-            <input class="field__input" type="text" name="age" placeholder="7">
-          </label>
-        </fieldset>
+        <div class="form__row">
 
-        <fieldset class="form__fieldset form__fieldset--programs">
-          <label class="field form__field">
-            <input class="visually-hidden" type="radio" name="program" value="slim" checked>
-            <span class="field__text">Похудение</span>
-          </label>
-          <label class="field form__field">
-            <input class="visually-hidden" type="radio" name="program" value="pro">
-            <span class="field__text">Набор массы</span>
-          </label>
-          <label class="field form__field">
-            <input class="visually-hidden" type="radio" name="program" value="advice">
-            <span class="field__text">Не знаю (нужен ваш совет)</span>
-          </label>
-        </fieldset>
+          <div class="form__fieldset form__fieldset--parameters">
+            <label class="field form__field">
+              Имя:*
+              <input class="field__input" type="text" name="name" placeholder="Барсик" required>
+            </label>
+            <label class="field form__field">
+              Вес (кг):*
+              <input class="field__input" type="text" name="weight" placeholder="7" required>
+            </label>
+            <label class="field form__field">
+              Возраст (лет):
+              <input class="field__input" type="text" name="age" placeholder="7">
+            </label>
+          </div>
 
-        <fieldset class="form__fieldset form__fieldset--contacts">
-          <p class="page__sub-title form__legend">Контактные данные <br>(владельца кота)</p>
+          <div class="form__fieldset form__fieldset--programs">
+            <label class="field form__field">
+              <input class="visually-hidden" type="radio" name="program" value="slim" checked>
+              <span class="field__text">Похудение</span>
+            </label>
+            <label class="field form__field">
+              <input class="visually-hidden" type="radio" name="program" value="pro">
+              <span class="field__text">Набор массы</span>
+            </label>
+            <label class="field form__field">
+              <input class="visually-hidden" type="radio" name="program" value="advice">
+              <span class="field__text">Не знаю (нужен ваш совет)</span>
+            </label>
+          </div>
+
+        </div>
+
+        <h3 class="page__sub-title form__legend">Контактные данные <br>(владельца кота)</h3>
+
+        <div class="form__fieldset form__fieldset--contacts form__row">
           <label class="field form__field">
             E-mail:*
             <input class="field__input field__input--email" type="email" name="age" placeholder="kuklachev@gmail.com" required>
@@ -85,18 +90,20 @@
             Телефон:*
             <input class="field__input field__input--tel" type="tel" name="age" placeholder="8 (960) 900-60-90" required>
           </label>
-        </fieldset>
+        </div>
 
-        <fieldset class="form__fieldset form__fieldset-comment">
-          <p class="page__sub-title form__legend">Комментарий</p>
+        <h3 class="page__sub-title form__legend">Комментарий</h3>
+
+        <div class="form__fieldset form__fieldset-comment">
           <label class="field form__field">
             <span class="visually-hidden">Расскажите обо всех повадках кота</span>
             <textarea class="field__textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
-        </fieldset>
+        </div>
 
-        <fieldset class="form__fieldset form__fieldset--additionally">
-          <p class="page__sub-title form__legend">Дополнительно</p>
+        <h3 class="page__sub-title form__legend form__row">Дополнительно</h3>
+
+        <div class="form__fieldset form__fieldset--additionally">
           <label class="field form__field">
             <input class="visually-hidden" type="checkbox" name="sweetener" checked>
             <span class="field__text">Сахарозаменитель</span>
@@ -113,7 +120,7 @@
             <input class="visually-hidden" type="checkbox" name="vitamins">
             <span class="field__text">Витамины</span>
           </label>
-        </fieldset>
+        </div>
 
         <div class="form__footer">
           <button class="button form__submit" type="submit">Отправить заявку</button>
@@ -128,7 +135,7 @@
 
       <section class="contacts">
 
-        <p class="contacts__partners">
+        <p class="contacts__partners page__container">
           <span class="contacts__card">
             <b class="contacts__invite">Приглашаем <br>к сотрудничеству дилеров!</b>
             <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</span>
@@ -141,7 +148,7 @@
 
       </section>
 
-      <section class="footer__bottom">
+      <section class="footer__bottom page__container">
 
         <p class="footer__name">
           <img src="http://placehold.it/128x24" width="128" height="24" alt="Cat Energy">

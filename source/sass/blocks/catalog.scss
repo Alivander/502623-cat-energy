@@ -1,38 +1,29 @@
 .catalog {
-  margin-top: 3px;
-  border-top: 1px solid $l-grey-1;
+  border-bottom: 1px solid $l-grey-1;
 
   @media (min-width: $medium-screen) {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 30px;
+    justify-content: space-between;
     border: none;
   }
 
   @media (min-width: $large-screen) {
-    padding: 0 40px;
+    justify-content: flex-start;
   }
 }
 
 .catalog__item {
-  border-bottom: 1px solid $l-grey-1;
+  border-top: 1px solid $l-grey-1;
 
   @media (min-width: $medium-screen) {
     flex-shrink: 0;
     margin-bottom: 3px;
     border: none;
-
-    &:nth-of-type(2n+1) {
-      margin-right: auto;
-    }
   }
 
   @media (min-width: $large-screen) {
     margin-right: 80px;
-
-    &:nth-of-type(2n+1) {
-      margin-right: 80px;
-    }
 
     &:nth-of-type(4n+4) {
       margin-right: 0;
