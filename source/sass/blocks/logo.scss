@@ -8,6 +8,15 @@
   text-align: center;
   border-bottom: 1px solid $l-grey-2;
 
+  &:focus,
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: $medium-screen) {
     padding: 0;
     border: none;
