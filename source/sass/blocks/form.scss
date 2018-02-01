@@ -78,7 +78,7 @@
     &--programs {
       margin: 0 -#{$m-field} 45px $l-field;
       padding: 23px 70px 25px 0;
-      border: 1px solid $l-grey-3;
+      border: 1px solid $l-grey-2;
       border-right: none;
 
       & .form__field {
@@ -116,7 +116,7 @@
       width: calc(50% - #{$l-field});
       margin: 0;
       padding: 23px 70px 25px 0;
-      border: 1px solid $l-grey-3;
+      border: 1px solid $l-grey-2;
 
       & .form__field {
         margin: 0 27px 13px;

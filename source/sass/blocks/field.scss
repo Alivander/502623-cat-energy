@@ -13,7 +13,7 @@
   padding: 12.5px 16px;
   font: inherit;
   text-transform: uppercase;
-  border: 1px solid $l-grey-1;
+  border: 1px solid $l-grey-2;
   outline: none;
 
   &:hover {
@@ -40,12 +40,10 @@
 
     &:focus {
       padding: 9px 17px;
-      border: 2px solid $d-grey-1;
     }
 
     &:invalid {
       padding: 9px 17px;
-      border: 2px solid $red;
     }
   }
 }
@@ -57,8 +55,23 @@
   padding: 13.5px;
   font: inherit;
   text-transform: uppercase;
-  border: 1px solid $l-grey-3;
+  border: 1px solid $l-grey-2;
   resize: none;
+  outline: none;
+
+  &:hover {
+    border: 1px solid $l-grey-3;
+  }
+
+  &:focus {
+    padding: 12.5px;
+    border: 2px solid $d-grey-1;
+  }
+
+  &:invalid {
+    padding: 12.5px;
+    border: 2px solid $red;
+  }
 
   &::placeholder {
     text-align: center;
@@ -69,6 +82,14 @@
     height: 175px;
     padding: 14px 18px;
 
+    &:focus {
+      padding: 13px 17px;
+    }
+
+    &:invalid {
+      padding: 13px 17px;
+    }
+
     &::placeholder {
       text-align: left;
     }
@@ -76,6 +97,7 @@
 }
 
 .field__text {
+  position: relative;
   display: flex;
   align-items: center;
 
@@ -85,7 +107,7 @@
     width: 30px;
     height: 30px;
     margin-right: 15px;
-    border: 1px solid $l-grey-1;
+    border: 1px solid $l-grey-2;
   }
 
   &:hover {
@@ -95,9 +117,7 @@
   }
 
   &:active {
-    &::before {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 
   @media (min-width: $medium-screen) {
