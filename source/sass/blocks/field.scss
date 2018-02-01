@@ -142,3 +142,16 @@
 [type="radio"]:checked + .field__text::before {
   background-color: $green-1;
 }
+
+[type="checkbox"]:checked + .field__text::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 20px;
+  height: 11px;
+  border: 2px solid $green-1;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-50deg);
+}
