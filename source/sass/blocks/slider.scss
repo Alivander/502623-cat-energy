@@ -1,6 +1,6 @@
 .slider {
   @media (min-width: $medium-screen) {
-    padding: 0 45px 48px;
+    padding-bottom: 48px;
     background-image: linear-gradient(to right, $l-grey-1 0%, $l-grey-1 50%, $l-grey-2 50%, $l-grey-2 100%);
     background-position: center bottom;
     background-size: 100% calc(100% - 190px);
@@ -9,22 +9,25 @@
 
   @media (min-width: $large-screen) {
     flex-shrink: 0;
-    padding: 0 0 50px;
+    padding-bottom: 50px;
     background-size: 100% calc(100% - 208px);
   }
 }
 
 .slider__content {
   position: relative;
+  width: $small-screen;
   min-height: 248px;
-  margin: 0 0 25px;
+  margin: 0 auto 25px;
 
   @media (min-width: $medium-screen) {
+    width: $medium-screen - ($m-field * 2);
     min-height: 517px;
     margin-bottom: 20px;
   }
 
   @media (min-width: $large-screen) {
+    width: 100%;
     margin-bottom: 40px;
   }
 }
