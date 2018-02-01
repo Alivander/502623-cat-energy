@@ -12,6 +12,7 @@
     border: 1px solid $l-grey-2;
   }
 
+  input:focus + &,
   &:hover {
     &::before {
       border: 1px solid $l-grey-3;
