@@ -73,6 +73,10 @@
     padding: 16px 0;
     border: none;
     border-bottom: 1px solid $l-grey-3;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $l-grey-3;
+    }
   }
 }
 
