@@ -124,6 +124,8 @@
 
   &:focus,
   &:hover {
+    color: $d-grey-3;
+
     &::before {
       right: 3px;
       width: 32px;
