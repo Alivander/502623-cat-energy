@@ -85,7 +85,19 @@
     width: 30px;
     height: 30px;
     margin-right: 15px;
-    border: 1px solid $l-grey-3;
+    border: 1px solid $l-grey-1;
+  }
+
+  &:hover {
+    &::before {
+      border: 1px solid $l-grey-3;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $medium-screen) {
