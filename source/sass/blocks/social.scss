@@ -22,6 +22,10 @@
   background-position: center;
   background-repeat: no-repeat;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $medium-screen) {
     width: 30px;
     height: 30px;

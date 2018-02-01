@@ -53,6 +53,10 @@
   padding: 20px 0;
   font-family: "Arial", sans-serif;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $medium-screen) {
     width: 163px;
     margin-bottom: -20px;
