@@ -12,6 +12,7 @@
   @media (min-width: $large-screen) {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 35px;
 
     & > .form__field {
