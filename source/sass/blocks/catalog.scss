@@ -1,38 +1,29 @@
 .catalog {
-  margin-top: 3px;
-  border-top: 1px solid $l-grey-1;
+  border-bottom: 1px solid $l-grey-1;
 
   @media (min-width: $medium-screen) {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 30px;
+    justify-content: space-between;
     border: none;
   }
 
   @media (min-width: $large-screen) {
-    padding: 0 40px;
+    justify-content: flex-start;
   }
 }
 
 .catalog__item {
-  border-bottom: 1px solid $l-grey-1;
+  border-top: 1px solid $l-grey-1;
 
   @media (min-width: $medium-screen) {
     flex-shrink: 0;
     margin-bottom: 3px;
     border: none;
-
-    &:nth-of-type(2n+1) {
-      margin-right: auto;
-    }
   }
 
   @media (min-width: $large-screen) {
     margin-right: 80px;
-
-    &:nth-of-type(2n+1) {
-      margin-right: 80px;
-    }
 
     &:nth-of-type(4n+4) {
       margin-right: 0;
@@ -53,9 +44,10 @@
     margin: 0 auto 22px;
     width: 30px;
     height: 30px;
-    background-image: url("http://placehold.it/30x30");
+    background-image:
+      linear-gradient(to right, transparent 0%, transparent 14px, $l-grey-1 14px, $l-grey-1 16px, transparent 16px, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, transparent 14px, $l-grey-1 14px, $l-grey-1 16px, transparent 16px, transparent 100%);
     background-position: center;
-    background-size: 30px 30px;
     background-repeat: no-repeat;
   }
 
@@ -69,6 +61,9 @@
       width: 60px;
       height: 60px;
       margin-bottom: 48px;
+      background-image:
+        linear-gradient(to right, transparent 0%, transparent 29px, $l-grey-1 29px, $l-grey-1 31px, transparent 31px, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, transparent 29px, $l-grey-1 29px, $l-grey-1 31px, transparent 31px, transparent 100%);
     }
   }
 

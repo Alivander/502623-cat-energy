@@ -1,37 +1,49 @@
 .example {
-  padding-top: 20px;
-  padding-bottom: 18px;
+  margin-right: -$s-field;
+  margin-left: -$s-field;
+  padding-bottom: 20px;
   background-color: $l-grey-1;
 
   @media (min-width: $medium-screen) {
-    padding-top: 22px;
+    margin: 0;
+    padding-top: 20px;
     padding-bottom: 0;
     background: none;
   }
 
   @media (min-width: $large-screen) {
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
+    margin-left: calc((50vw - 50%) * -1);
+    margin-right: calc((50vw - 50%) * -1);
+    padding-top: 0;
     padding-bottom: 0;
     background-image: linear-gradient(to right, $l-grey-1 0%, $l-grey-1 50%, $l-grey-2 50%, $l-grey-2 100%);
     background-position: center bottom;
-    background-size: 100% calc(100% - 213px);
+    background-size: 100% calc(100% - 190px);
     background-repeat: no-repeat;
   }
 }
 
+.example__wrapper {
+  @media (min-width: $large-screen) {
+    display: flex;
+    justify-content: center;
+    width: $large-screen;
+    margin: 0 auto;
+    padding: 0 $l-field;
+  }
+}
+
 .example__text {
-  padding: 0 20px;
+  padding: $s-field;
 
   @media (min-width: $medium-screen) {
-    padding: 0 30px;
+    padding: 0;
   }
 
   @media (min-width: $large-screen) {
     flex-shrink: 0;
-    width: 610px;
-    padding: 73px 0 0 40px;
+    width: 50%;
+    padding: 55px 0 0;
   }
 }
 
@@ -39,7 +51,7 @@
   margin-bottom: 23px;
 
   @media (min-width: $medium-screen) {
-    margin-bottom: 64px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: $large-screen) {
@@ -53,7 +65,7 @@
   font-family: "Arial", sans-serif;
 
   @media (min-width: $medium-screen) {
-    margin-bottom: 53px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: $large-screen) {
@@ -68,7 +80,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 15px;
   list-style: none;
 
   @media (min-width: $medium-screen) {
@@ -91,14 +103,14 @@
   border: 1px solid $l-grey-3;
 
   @media (min-width: $medium-screen) {
-    max-width: 22.9%;
-    margin-right: 42px;
+    max-width: calc(25% - (#{$m-field} / 2));
     margin-bottom: 0;
     padding: 15px 10px 20px;
   }
 
   @media (min-width: $large-screen) {
     max-width: 162px;
+    margin-right: 40px;
     margin-bottom: 55px;
   }
 }
@@ -147,9 +159,8 @@
 
   @media (min-width: $medium-screen) {
     @include font(20px, 29px);
-    min-width: 24.7%;
-    width: 24.7%;
-    margin-left: auto;
+    min-width: auto;
+    width: calc(50% - (#{$m-field} * 2));
     text-align: right;
 
     & span {
@@ -165,5 +176,17 @@
       display: inline-block;
       width: 60px;
     }
+  }
+}
+
+.example__slider {
+  @media (min-width: $medium-screen) {
+    margin-right: -$m-field;
+    margin-left: -$m-field;
+  }
+
+  @media (min-width: $large-screen) {
+    width: 50%;
+    margin: 0;
   }
 }

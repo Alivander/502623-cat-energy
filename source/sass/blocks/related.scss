@@ -1,5 +1,4 @@
 .related {
-  @include container;
   padding-top: 28px;
   padding-bottom: 35px;
 
@@ -60,16 +59,24 @@
 
   @media (min-width: $medium-screen) {
     align-items: baseline;
-    padding: 25px 38px 26px;
+    padding: 26px 38px;
     border: 1px solid $l-grey-2;
+
+    &:not(:last-of-type) {
+      border-bottom: none;
+    }
   }
 
   @media (min-width: $large-screen) {
     justify-content: flex-start;
     flex-wrap: nowrap;
-    padding: 15.5px 0;
+    padding: 16px 0;
     border: none;
     border-bottom: 1px solid $l-grey-3;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $l-grey-3;
+    }
   }
 }
 

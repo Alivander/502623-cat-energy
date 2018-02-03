@@ -3,12 +3,13 @@
 }
 
 .contacts__partners {
-  margin: 0 auto;
-  padding: 28px 20px 26px;
+  padding-top: 30px;
+  padding-bottom: 25px;
 
   @media (min-width: $medium-screen) {
     justify-content: space-between;
-    padding: 66px 70px 55px;
+    padding-top: 66px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: $large-screen) {
@@ -22,6 +23,7 @@
 
   @media (min-width: $medium-screen) {
     justify-content: space-between;
+    padding: 0 $l-field;
   }
 
   @media (min-width: $large-screen) {

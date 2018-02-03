@@ -1,12 +1,14 @@
 .product {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   font-size: 16px;
-  padding: 0 20px 24px;
+  padding: 0 $m-field 24px;
 
   @media (min-width: $medium-screen) {
-    width: 45.7%;
-    padding: 0 22px 40px;
+    display: block;
+    width: calc(50% - #{$m-field});
+    padding: 0 $l-field $l-field;
     background-image: linear-gradient(to bottom, transparent 0%, transparent 138px, $l-grey-1 138px, $l-grey-1 100%);
     background-position: center;
     background-size: 100%;
@@ -14,14 +16,16 @@
   }
 
   @media (min-width: $large-screen) {
-    align-items: flex-start;
-    max-width: 245px;
+    max-width: calc(25% - (#{$l-field} * 1.5));
   }
 }
 
 .product__image {
+  display: block;
+
   @media (min-width: $medium-screen) {
-    width: 100%;
+    margin-right: -$l-field;
+    margin-left: -$l-field;
   }
 }
 
@@ -29,11 +33,11 @@
   display: block;
   width: 140;
   height: 144px;
+  margin: 0 auto;
 
   @media (min-width: $medium-screen) {
     width: 280px;
     height: 288px;
-    margin: 0 auto;
   }
 
   @media (min-width: $large-screen) {
@@ -66,14 +70,14 @@
   color: $d-grey-3;
 
   @media (min-width: $medium-screen) {
-    max-width: 47%;
+    max-width: 130px;
     margin: 0 auto 20px;
     font-size: 20px;
     text-align: center;
   }
 
   @media (min-width: $large-screen) {
-    max-width: 70%;
+    max-width: 140px;
     margin-bottom: 19px;
   }
 }
@@ -85,17 +89,12 @@
   border-collapse: collapse;
 
   @media (min-width: $medium-screen) {
-    max-width: calc(100% - 30px);
     margin: 0 auto 21px;
     font-size: 16px;
 
     & tr {
       border-bottom: 1px solid $l-grey-3;
     }
-  }
-
-  @media (min-width: $large-screen) {
-    max-width: calc(100% - 33px);
   }
 }
 
@@ -113,10 +112,4 @@
 
 .product__value {
   text-align: right;
-}
-
-.product__button {
-  @media (min-width: $medium-screen) {
-    margin: 0 15px;
-  }
 }

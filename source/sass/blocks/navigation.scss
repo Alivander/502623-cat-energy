@@ -3,11 +3,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 30px;
-  }
-
-  @media (min-width: $large-screen) {
-    padding: 52px 40px 25px;
   }
 }
 
@@ -45,6 +40,7 @@
   }
 
   @media (min-width: $large-screen) {
+    max-width: calc(50% + 40px);
     font-size: 20px;
   }
 }
@@ -67,6 +63,15 @@
   @media (min-width: $medium-screen) {
     padding: 7px 0;
     border-bottom: 2px solid transparent;
+
+    &:focus,
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
 
     &--current {
       border-bottom-color: $green-1;

@@ -9,10 +9,31 @@
   text-transform: uppercase;
   color: #ffffff;
   background-color: $green-1;
+  transition-duration: 0.15s;
+
+  &:focus,
+  &:hover {
+    color: #ffffff;
+    background-color: $green-2;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   &--grey {
     color: $d-grey-3;
     background-color: $l-grey-1;
+
+    &:focus,
+    &:hover {
+      color: $d-grey-3;
+      background-color: $l-grey-2;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
   }
 
   @media (min-width: $medium-screen) {
