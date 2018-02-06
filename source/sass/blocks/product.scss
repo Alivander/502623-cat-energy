@@ -3,7 +3,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   font-size: 16px;
-  padding: 0 $m-field 24px;
+  padding-bottom: 25px;
 
   @media (min-width: $medium-screen) {
     display: block;
@@ -32,7 +32,7 @@
   }
 
   @media (min-width: $large-screen) {
-    height: 265px;
+    height: 270px;
     margin-bottom: 35px;
   }
 }
@@ -96,6 +96,10 @@
     & tr {
       border-bottom: 1px solid $l-grey-3;
     }
+  }
+
+  @media (min-width: $large-screen) {
+    margin-bottom: 30px;
   }
 }
 

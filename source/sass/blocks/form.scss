@@ -24,11 +24,20 @@
 }
 
 .form__four-columns {
+  & .form__field {
+    margin-bottom: 12px;
+  }
+
   @media (min-width: $medium-screen) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+
+    &.form__fieldset {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
 
     & > .form__field {
       width: calc(50% - #{$m-field});
@@ -47,7 +56,7 @@
 .form__info {
   @include font(14px, 18px);
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   color: $d-grey-3;
 
@@ -70,14 +79,14 @@
   border: none;
 
   &--frame {
-    margin: 0 -#{$s-field} 30px;
+    margin: 0 -#{$s-field} 25px;
     padding-right: $s-field;
     padding-left: $s-field;
     border-top: 1px solid $l-grey-2;
     border-bottom: 1px solid $l-grey-2;
 
     & .form__field {
-      margin-bottom: 12.5px;
+      margin-bottom: 13px;
     }
   }
 
@@ -94,11 +103,6 @@
       & .form__field {
         margin: 0 27px 13px;
       }
-    }
-
-    &--additionally {
-      padding-top: 10px;
-      padding-bottom: 15px;
     }
   }
 
@@ -121,18 +125,15 @@
         margin: 0 27px 13px;
       }
     }
-
-    &--additionally {
-      padding-top: 10px;
-      padding-bottom: 15px;
-    }
   }
 }
 
 .form__legend {
+  margin-top: 10px;
   margin-bottom: 15px;
 
   @media (min-width: $medium-screen) {
+    margin-top: 0;
     margin-bottom: 45px;
     padding-top: 35px;
 
@@ -155,20 +156,19 @@
 }
 
 .form__footer {
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 30px;
 
   @media (min-width: $medium-screen) {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 10px;
     padding-bottom: 45px;
   }
 
   @media (min-width: $large-screen) {
     justify-content: space-between;
-    padding-top: 15px;
+    padding-top: 20px;
     padding-bottom: 55px;
   }
 }

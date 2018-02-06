@@ -1,11 +1,34 @@
 .catalog {
-  border-bottom: 1px solid $l-grey-1;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    width: 100vw;
+    margin-left: -50vw;
+    border-top: 1px solid $l-grey-1;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
 
   @media (min-width: $medium-screen) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: $large-screen) {
@@ -14,16 +37,31 @@
 }
 
 .catalog__item {
-  border-top: 1px solid $l-grey-1;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100vw;
+    margin-left: -50vw;
+    border-top: 1px solid $l-grey-1;
+  }
 
   @media (min-width: $medium-screen) {
     flex-shrink: 0;
     margin-bottom: 3px;
     border: none;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: $large-screen) {
     margin-right: 80px;
+    margin-bottom: 4px;
 
     &:nth-of-type(4n+4) {
       margin-right: 0;
@@ -33,10 +71,9 @@
 
 .catalog__more {
   margin: 0;
-  padding: 27px 20px 23px;
+  padding: 25px 0;
   font-size: 16px;
   text-align: center;
-  border-bottom: 1px solid $l-grey-1;
 
   &::before {
     content: "";
