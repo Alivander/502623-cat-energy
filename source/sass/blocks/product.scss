@@ -24,8 +24,16 @@
   display: block;
 
   @media (min-width: $medium-screen) {
-    margin-right: -$l-field;
-    margin-left: -$l-field;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 260px;
+    margin: 0 -#{$l-field} 40px;
+  }
+
+  @media (min-width: $large-screen) {
+    height: 265px;
+    margin-bottom: 35px;
   }
 }
 
@@ -33,17 +41,14 @@
   display: block;
   width: 140;
   height: 144px;
-  margin: 0 auto;
 
   @media (min-width: $medium-screen) {
-    width: 280px;
-    height: 288px;
+    width: 324px;
+    height: auto;
   }
 
   @media (min-width: $large-screen) {
-    width: 200px;
-    height: 288px;
-    object-fit: cover;
+    width: 245px;
   }
 }
 
@@ -53,11 +58,7 @@
 
   @media (min-width: $medium-screen) {
     width: 100%;
-    padding: 13px 0;
-  }
-
-  @media (min-width: $large-screen) {
-    padding: 13px 0 12px;
+    padding: 0;
   }
 }
 
@@ -89,7 +90,7 @@
   border-collapse: collapse;
 
   @media (min-width: $medium-screen) {
-    margin: 0 auto 21px;
+    margin: 0 auto 35px;
     font-size: 16px;
 
     & tr {
