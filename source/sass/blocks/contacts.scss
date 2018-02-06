@@ -14,7 +14,7 @@
 
   @media (min-width: $large-screen) {
     max-width: $large-screen - 80px;
-    padding: 95px 0 103px;
+    padding: 95px 0 100px;
   }
 }
 
@@ -68,7 +68,33 @@
 }
 
 .contacts__map {
+  position: relative;
   margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 62px;
+    height: 53px;
+    margin-top: -43px;
+    margin-left: -31px;
+    background-image: url("../img/map-pin.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $medium-screen) {
+    &::before {
+      top: 50%;
+      left: 50%;
+      width: 124px;
+      height: 106px;
+      margin-top: -52px;
+      margin-left: -62px;
+    }
+  }
 
   @media (min-width: $large-screen) {
     position: absolute;
@@ -76,6 +102,11 @@
     left: 0;
     width: 100%;
     height: 100%;
+
+    &::before {
+      top: 50%;
+      left: 68%;
+    }
   }
 }
 

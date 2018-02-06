@@ -1,20 +1,21 @@
 .programs {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 18px;
+  padding-bottom: 15px;
 
   @media (min-width: $medium-screen) {
     padding-top: 0;
   }
 
   @media (min-width: $large-screen) {
-    padding-top: 30px;
+    padding-top: 80px;
     display: flex;
     justify-content: space-between;
   }
 }
 
 .programs__variant {
-  padding: 22px 20px 20px;
+  position: relative;
+  padding: 25px 20px 20px;
   background-color: $l-grey-1;
 
   &:first-of-type {
@@ -22,35 +23,20 @@
   }
 
   @media (min-width: $medium-screen) {
-    padding: 78px 53px 57px;
+    padding: 78px 315px 57px 53px;
 
     &:first-of-type {
       margin-bottom: 30px;
-    }
-
-    &--slim {
-      padding-right: 280px;
-    }
-
-    &--pro {
-      padding-right: 315px;
     }
   }
 
   @media (min-width: $large-screen) {
     max-width: 570px;
     padding-top: 47px;
+    padding-right: 53px;
 
     &:first-of-type {
       margin-bottom: 0;
-    }
-
-    &--slim {
-      padding-right: 53px;
-    }
-
-    &--pro {
-      padding-right: 53px;
     }
   }
 }
@@ -64,15 +50,104 @@
   color: $d-grey-3;
   text-transform: uppercase;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
+    background-color: $green-1;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  &--slim::after {
+    top: 2px;
+    left: 11px;
+    width: 35px;
+    height: 49px;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-size: 35px 49px;
+  }
+
+  &--pro::after {
+    top: 14px;
+    left: -7px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-size: 67px 28px;
+  }
+
   @media (min-width: $medium-screen) {
+    position: static;
     margin-bottom: 24px;
     padding: 0;
     font-size: 36px;
+
+    &::before {
+      top: 92px;
+      right: 62px;
+      left: auto;
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::after {
+      top: 80px;
+      right: 92px;
+      left: auto;
+      width: 140px;
+      height: 194px;
+      background-size: 140px 194px;
+    }
+
+    &--pro::after {
+      top: 135px;
+      right: 28px;
+      left: auto;
+      width: 268px;
+      height: 112px;
+      background-size: 268px 112px;
+    }
   }
 
   @media (min-width: $large-screen) {
+    position: relative;
     margin-bottom: 45px;
     padding: 28px 0 28px 160px;
+
+    &::before {
+      top: 0;
+      right: auto;
+      left: 0;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::after {
+      top: -8px;
+      right: auto;
+      left: 13px;
+      width: 70px;
+      height: 97px;
+      background-size: 70px 97px;
+    }
+
+    &--pro::after {
+      top: 20px;
+      right: auto;
+      left: -18px;
+      width: 134px;
+      height: 56px;
+      background-size: 134px 56px;
+    }
   }
 }
 
@@ -96,14 +171,14 @@
 .programs__link {
   @include font(16px, 16px);
   position: relative;
-  padding-right: 60px;
+  padding-right: 45px;
   text-transform: uppercase;
   color: $d-grey-3;
 
   &::before {
     content: "";
     position: absolute;
-    top: 12.5px;
+    top: 10.5px;
     right: 13px;
     width: 22px;
     height: 2px;
@@ -114,7 +189,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 8px;
+    top: 6px;
     right: 10px;
     border: 5.5px solid transparent;
     border-right: none;
@@ -142,5 +217,14 @@
 
   @media (min-width: $medium-screen) {
     font-size: 20px;
+    padding-right: 60px;
+
+    &::before {
+      top: 12.5px;
+    }
+
+    &::after {
+      top: 8px;
+    }
   }
 }

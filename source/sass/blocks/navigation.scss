@@ -13,10 +13,15 @@
   right: 20px;
   width: 24px;
   height: 18px;
-  background-image: url("http://placehold.it/24x18");
+  background-image: url("../img/icon-mobile-menu.svg");
   background-position: center;
   background-size: 28px 18px;
   background-repeat: no-repeat;
+
+  &--close {
+    background-image: url("../img/icon-close.svg");
+    background-size: 18px 18px;
+  }
 
   @media (min-width: $medium-screen) {
     display: none;
