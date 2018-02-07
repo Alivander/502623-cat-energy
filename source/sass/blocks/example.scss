@@ -42,7 +42,7 @@
 
   @media (min-width: $large-screen) {
     flex-shrink: 0;
-    width: 50%;
+    width: calc(50% - #{$l-field});
     padding: 55px 0 0;
   }
 }
@@ -65,7 +65,7 @@
   font-family: "Arial", sans-serif;
 
   @media (min-width: $medium-screen) {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: $large-screen) {
@@ -186,7 +186,8 @@
   }
 
   @media (min-width: $large-screen) {
-    width: 50%;
+    width: calc(50% + #{$l-field} * 2);
     margin: 0;
+    margin-right: -$l-field;
   }
 }

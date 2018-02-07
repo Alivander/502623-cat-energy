@@ -3,7 +3,7 @@
 
   @media (min-width: $medium-screen) {
     @include font(20px, 20px);
-    padding-top: 28px;
+    padding-top: 30px;
     padding-bottom: 28px;
   }
 }
@@ -13,8 +13,9 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
+    & > .form__fieldset,
     & > .form__field {
       width: calc(50% - #{$l-field});
       margin-bottom: 5px;
@@ -23,11 +24,20 @@
 }
 
 .form__four-columns {
+  & .form__field {
+    margin-bottom: 12px;
+  }
+
   @media (min-width: $medium-screen) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+
+    &.form__fieldset {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
 
     & > .form__field {
       width: calc(50% - #{$m-field});
@@ -46,7 +56,7 @@
 .form__info {
   @include font(14px, 18px);
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   color: $d-grey-3;
 
@@ -64,40 +74,28 @@
 }
 
 .form__fieldset {
-  margin: 0;
-  padding: 15px 0 25px;
+  margin: 0 0 5px;
+  padding: 20px 0;
   border: none;
-
-  &--parameters {
-    margin: 0 -#{$s-field} 10px;
-    padding-right: $s-field;
-    padding-bottom: 20px;
-    padding-left: $s-field;
-    border-bottom: 1px solid $l-grey-2;
-  }
 
   &--frame {
     margin: 0 -#{$s-field} 25px;
     padding-right: $s-field;
-    padding-bottom: 25px;
     padding-left: $s-field;
+    border-top: 1px solid $l-grey-2;
     border-bottom: 1px solid $l-grey-2;
 
     & .form__field {
-      margin-bottom: 12.5px;
+      margin-bottom: 13px;
     }
   }
 
   @media (min-width: $medium-screen) {
+    margin: 0;
     padding: 30px $l-field;
 
-    &--parameters {
-      margin: 0 0 40px;
-      border: none;
-    }
-
     &--frame {
-      margin: 0 -#{$m-field} 45px $l-field;
+      margin: 45px -#{$m-field} 40px $l-field;
       padding: 23px 70px 25px 0;
       border: 1px solid $l-grey-2;
       border-right: none;
@@ -106,11 +104,6 @@
         margin: 0 27px 13px;
       }
     }
-
-    &--additionally {
-      padding-top: 10px;
-      padding-bottom: 15px;
-    }
   }
 
   @media (min-width: $large-screen) {
@@ -118,8 +111,6 @@
     padding: 30px 0;
 
     &--parameters {
-      width: calc(50% - #{$l-field});
-      margin: 0;
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -134,18 +125,15 @@
         margin: 0 27px 13px;
       }
     }
-
-    &--additionally {
-      padding-top: 10px;
-      padding-bottom: 15px;
-    }
   }
 }
 
 .form__legend {
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 
   @media (min-width: $medium-screen) {
+    margin-top: 0;
     margin-bottom: 45px;
     padding-top: 35px;
 
@@ -156,7 +144,7 @@
 }
 
 .form__field {
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -168,8 +156,8 @@
 }
 
 .form__footer {
-  padding-top: 5px;
-  padding-bottom: 35px;
+  padding-top: 10px;
+  padding-bottom: 30px;
 
   @media (min-width: $medium-screen) {
     display: flex;
@@ -180,7 +168,7 @@
 
   @media (min-width: $large-screen) {
     justify-content: space-between;
-    padding-top: 15px;
+    padding-top: 20px;
     padding-bottom: 55px;
   }
 }

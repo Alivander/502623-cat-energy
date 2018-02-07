@@ -1,44 +1,89 @@
 .slider {
   @media (min-width: $medium-screen) {
-    padding-bottom: 48px;
+    padding-bottom: 55px;
     background-image: linear-gradient(to right, $l-grey-1 0%, $l-grey-1 50%, $l-grey-2 50%, $l-grey-2 100%);
     background-position: center bottom;
-    background-size: 100% calc(100% - 190px);
+    background-size: 100% calc(100% - 170px);
     background-repeat: no-repeat;
   }
 
   @media (min-width: $large-screen) {
     flex-shrink: 0;
-    padding-bottom: 50px;
+    background-image: linear-gradient(to right, $l-grey-1 0%, $l-grey-1 calc(50% + 20px), $l-grey-2 calc(50% + 20px), $l-grey-2 100%);
     background-size: 100% calc(100% - 208px);
   }
 }
 
 .slider__content {
   position: relative;
-  width: $small-screen;
+  width: 320px;
   min-height: 248px;
   margin: 0 auto 25px;
 
   @media (min-width: $medium-screen) {
-    width: $medium-screen - ($m-field * 2);
+    width: 690px;
     min-height: 517px;
     margin-bottom: 20px;
   }
 
   @media (min-width: $large-screen) {
-    width: 100%;
     margin-bottom: 40px;
   }
 }
 
-.slider__image {
+.slider__filter {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+
+  @media (min-width: $medium-screen) {
+    left: auto;
+    overflow: hidden;
+
+    &--before {
+      left: 0;
+      width: 345px;
+    }
+
+    &--after {
+      right: 0;
+      width: 345px;
+    }
+  }
+
+  @media (min-width: $large-screen) {
+    &--before {
+      width: 365px;
+    }
+
+    &--after {
+      width: 325px;
+    }
+  }
+}
+
+.slider__image {
+  width: 320px;
   height: auto;
   opacity: 0;
+
+  @media (min-width: $medium-screen) {
+    position: absolute;
+    top: 0;
+    width: 690px;
+    max-width: 690px;
+    opacity: 1;
+
+    &--before {
+      left: 0;
+    }
+
+    &--after {
+      right: 0;
+    }
+  }
 }
 
 .slider__control {
@@ -49,7 +94,7 @@
   margin-bottom: 15px;
 
   @media (min-width: $large-screen) {
-    padding-left: 37px;
+    padding-left: 40px;
   }
 }
 
@@ -78,10 +123,11 @@
 
 .slider__range {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   width: 84px;
   height: 14px;
   margin: 0 15px;
+  padding: 3px 5px;
   background-color: #ffffff;
   border: 1px solid $l-grey-3;
   border-radius: 7px;
@@ -97,24 +143,15 @@
 }
 
 .slider__toggle {
-  position: absolute;
-  top: 3px;
-  width: 35px;
+  width: 50%;
   height: 6px;
   background-color: $green-1;
   border-radius: 3px;
   opacity: 0;
   cursor: pointer;
 
-  &--before {
-    left: 5px;
-  }
-
-  &--after {
-    right: 5px;
-  }
-
   @media (min-width: $medium-screen) {
+    position: absolute;
     top: -14px;
     width: 34px;
     height: 34px;

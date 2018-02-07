@@ -1,33 +1,67 @@
 .social {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .social__network {
-  margin: 0 15.5px;
-
-  @media (min-width: $medium-screen) {
-    margin: 0 12px;
-  }
+  margin: 0 15px;
 }
 
 .social__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 25px;
   height: 25px;
-  background-image: url("http://placehold.it/25x25");
-  background-position: center;
-  background-repeat: no-repeat;
 
   &:active {
     opacity: 0.3;
   }
 
+  & img {
+    display: block;
+  }
+
+  &--vk img {
+    width: 22px;
+    height: 12px;
+  }
+
+  &--ins img {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--fb img {
+    width: 10px;
+    height: 19px;
+  }
+
   @media (min-width: $medium-screen) {
-    width: 30px;
-    height: 30px;
+    width: auto;
+    height: auto;
+
+    &--vk img {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--ins img {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      margin-right: 10px;
+    }
+
+    &--fb img {
+      width: 14px;
+      height: 28px;
+    }
   }
 }
