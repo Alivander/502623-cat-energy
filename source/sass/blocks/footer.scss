@@ -53,6 +53,11 @@
   padding: 20px 0;
   font-family: "Arial", sans-serif;
 
+  &:focus svg,
+  &:hover svg {
+    fill: $green-1;
+  }
+
   &:active {
     opacity: 0.3;
   }

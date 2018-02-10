@@ -92,20 +92,22 @@
 
         </div>
 
-        <h3 class="page__sub-title form__legend">Контактные данные <br>(владельца кота)</h3>
+        <h3 class="page__sub-title form__legend">Контактные данные<br>&#032;(владельца кота)</h3>
 
         <div class="form__fieldset form__two-columns">
           <label class="field form__field">
             E-mail:*
             <input class="field__input field__input--icon" type="email" name="age" value="kuklachev@gmail.com" required>
-            <!-- img будет заменен на svg-спрайт -->
-            <img class="field__icon field__icon--mail" src="img/icon-mail.svg" width="17" height="13">
+            <svg class="field__icon field__icon--mail" width="17" height="13">
+              <use xlink:href="img/sprite.svg#s-icon-mail"></use>
+            </svg>
           </label>
           <label class="field form__field">
             Телефон:*
             <input class="field__input field__input--icon" type="tel" name="age" value="8 (960) 900-60-90" required>
-            <!-- img будет заменен на svg-спрайт -->
-            <img class="field__icon field__icon--phone" src="img/icon-phone.svg" width="20" height="20">
+            <svg class="field__icon field__icon--phone" width="20" height="20">
+              <use xlink:href="img/sprite.svg#s-icon-phone"></use>
+            </svg>
           </label>
         </div>
 
@@ -181,25 +183,34 @@
         <ul class="social footer__social">
           <li class="social__network">
             <a class="social__link social__link--vk" href="#">
-              <!-- img будет заменен на svg-спрайт -->
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/icon-vk.svg">
-                <img src="img/icon-vk-mobile.svg" width="22" height="12">
-              </picture>
+              <svg class="social__icon social__icon--small" width="22" height="12">
+                <use xlink:href="img/sprite.svg#s-icon-vk-mobile"></use>
+              </svg>
+              <svg class="social__icon social__icon--big" width="30" height="16">
+                <use xlink:href="img/sprite.svg#s-icon-vk"></use>
+              </svg>
               <span class="visually-hidden">Мы ВКонтакте</span>
             </a>
           </li>
           <li class="social__network">
             <a class="social__link social__link--ins" href="#">
-              <!-- img будет заменен на svg-спрайт -->
-              <img src="img/icon-insta-mobile.svg" width="16" height="16">
+              <svg class="social__icon social__icon--small" width="16" height="16">
+                <use xlink:href="img/sprite.svg#s-icon-ins-mobile"></use>
+              </svg>
+              <svg class="social__icon social__icon--big" width="23" height="23">
+                <use xlink:href="img/sprite.svg#s-icon-ins"></use>
+              </svg>
               <span class="visually-hidden">Мы в Инстаграм</span>
             </a>
           </li>
           <li class="social__network">
             <a class="social__link social__link--fb" href="#">
-              <!-- img будет заменен на svg-спрайт -->
-              <img src="img/icon-fb-mobile.svg" width="10" height="19">
+              <svg class="social__icon social__icon--small" width="10" height="19">
+                <use xlink:href="img/sprite.svg#s-icon-fb-mobile"></use>
+              </svg>
+              <svg class="social__icon social__icon--big" width="14" height="28">
+                <use xlink:href="img/sprite.svg#s-icon-fb"></use>
+              </svg>
               <span class="visually-hidden">Мы в Фейсбук</span>
             </a>
           </li>
@@ -207,8 +218,9 @@
 
         <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="footer__author">HTML Academy</span>
-          <!-- img будет заменен на svg-спрайт -->
-          <img class="footer__logo-author" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+          <svg class="social__icon social__icon--big" width="27" height="34">
+            <use xlink:href="img/sprite.svg#s-logo-htmlacademy"></use>
+          </svg>
         </a>
 
       </section>
