@@ -18,25 +18,26 @@
   width: 25px;
   height: 25px;
 
+  &:focus svg,
+  &:hover svg {
+    fill: $green-1;
+  }
+
   &:active {
     opacity: 0.3;
   }
 
-  & img {
-    display: block;
-  }
-
-  &--vk img {
+  &--vk svg {
     width: 22px;
     height: 12px;
   }
 
-  &--ins img {
-    width: 16px;
-    height: 16px;
-  }
+  // &--ins svg {
+  //   width: 16px;
+  //   height: 16px;
+  // }
 
-  &--fb img {
+  &--fb svg {
     width: 10px;
     height: 19px;
   }
@@ -45,23 +46,45 @@
     width: auto;
     height: auto;
 
-    &--vk img {
+    &--vk svg {
       width: 30px;
       height: 16px;
     }
 
-    &--ins img {
-      width: 23px;
-      height: 23px;
-    }
+    // &--ins svg {
+    //   width: 23px;
+    //   height: 23px;
+    // }
 
     &--fb {
       margin-right: 10px;
     }
 
-    &--fb img {
+    &--fb svg {
       width: 14px;
       height: 28px;
+    }
+  }
+}
+
+.social__icon {
+  fill: $d-grey-3;
+
+  &--small {
+    display: block;
+  }
+
+  &--big {
+    display: none;
+  }
+
+  @media (min-width: $medium-screen) {
+    &--small {
+      display: none;
+    }
+
+    &--big {
+      display: block;
     }
   }
 }
