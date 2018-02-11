@@ -130,8 +130,8 @@
           </div>
 
           <div class="slider example__slider">
-            <input class="visually-hidden slider-toggle-before" id="slider-toggle-before" type="radio" name="slider-toggle" checked>
-            <input class="visually-hidden slider-toggle-after" id="slider-toggle-after" type="radio" name="slider-toggle">
+            <input class="slider__input slider__input--before" id="slider-input-before" type="radio" name="slider-toggle" checked>
+            <input class="slider__input slider__input--after" id="slider-input-after" type="radio" name="slider-toggle">
             <p class="slider__content">
               <span class="slider__filter slider__filter--before">
                 <picture>
@@ -158,10 +158,10 @@
               <span class="slider__text slider__text--before">Было</span>
               <span class="slider__range">
                 <!-- атрибут style задан для демонстрации управления слайдером с помощью js -->
-                <label class="slider__toggle slider__toggle--before" for="slider-toggle-before" style="left: calc(50% - 15px);">
+                <label class="slider__toggle slider__toggle--before" for="slider-input-before" style="left: calc(50% - 15px);" tabindex="0">
                   <span class="visually-hidden">Было</span>
                 </label>
-                <label class="slider__toggle slider__toggle--after" for="slider-toggle-after">
+                <label class="slider__toggle slider__toggle--after" for="slider-input-after" tabindex="0">
                   <span class="visually-hidden">Стало</span>
                 </label>
               </span>
