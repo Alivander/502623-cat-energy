@@ -13,14 +13,20 @@
   }
 
   input:focus + &,
-  &:hover {
-    &::before {
-      border: 1px solid $l-grey-3;
-    }
+  &:hover::before {
+    border: 1px solid $l-grey-3;
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  input:disabled + & {
+    opacity: 0.3;
+  }
+
+  input:disabled + &::before {
+    border: 1px solid $l-grey-2;
   }
 
   @media (min-width: $medium-screen) {
