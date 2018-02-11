@@ -6,6 +6,7 @@
   min-height: 66px;
   padding: 24px 20px;
   text-align: center;
+  background-color: #ffffff;
   border-bottom: 1px solid $l-grey-2;
 
   &:focus,
@@ -19,6 +20,7 @@
 
   @media (min-width: $medium-screen) {
     padding: 0;
+    background-color: transparent;
     border: none;
   }
 }

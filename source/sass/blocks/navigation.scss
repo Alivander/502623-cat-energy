@@ -1,4 +1,7 @@
 .navigation {
+  position: relative;
+  z-index: 10;
+
   @media (min-width: $medium-screen) {
     display: flex;
     justify-content: space-between;
@@ -17,6 +20,15 @@
   background-position: center;
   background-size: 28px 18px;
   background-repeat: no-repeat;
+  transition-duration: 0.2s;
+
+  .no-js & {
+    display: none;
+  }
+
+  .js & {
+    display: block;
+  }
 
   &--close {
     background-image: url("../img/icon-close.svg");
@@ -24,7 +36,9 @@
   }
 
   @media (min-width: $medium-screen) {
-    display: none;
+    .js & {
+      display: none;
+    }
   }
 }
 
@@ -35,6 +49,14 @@
   text-align: center;
   text-transform: uppercase;
   list-style: none;
+  transition-duration: 0.5s;
+
+  &--close {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
 
   @media (min-width: $medium-screen) {
     @include font(18px, 25px);
@@ -42,6 +64,10 @@
     align-items: flex-start;
     flex-wrap: wrap;
     flex-shrink: 0;
+
+    &--close {
+      position: static;
+    }
   }
 
   @media (min-width: $large-screen) {
@@ -65,6 +91,8 @@
 }
 
 .navigation__link {
+  transition-duration: 0.2s;
+
   @media (min-width: $medium-screen) {
     padding: 7px 0;
     border-bottom: 2px solid transparent;
