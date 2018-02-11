@@ -48,7 +48,8 @@
 }
 
 .example__heading {
-  margin-bottom: 23px;
+  margin-bottom: 20px;
+  padding: 0;
 
   @media (min-width: $medium-screen) {
     margin-bottom: 65px;

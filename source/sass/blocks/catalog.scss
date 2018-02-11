@@ -1,5 +1,6 @@
 .catalog {
   position: relative;
+  padding-top: 5px;
 
   &::before,
   &::after {
@@ -32,6 +33,7 @@
   }
 
   @media (min-width: $large-screen) {
+    padding-top: 0;
     justify-content: flex-start;
   }
 }

@@ -32,14 +32,14 @@
 .form__info {
   @include font(14px, 18px);
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
   text-transform: uppercase;
   color: $d-grey-3;
 
   @media (min-width: $medium-screen) {
     @include font(20px, 30px);
     margin-bottom: 35px;
-    padding: 0 $l-field;
+    padding: 5px $l-field 0;
   }
 
   @media (min-width: $large-screen) {

@@ -10,7 +10,7 @@
   @media (min-width: $large-screen) {
     flex-shrink: 0;
     background-image: linear-gradient(to right, $l-grey-1 0%, $l-grey-1 calc(50% + 20px), $l-grey-2 calc(50% + 20px), $l-grey-2 100%);
-    background-size: 100% calc(100% - 208px);
+    background-size: 100% calc(100% - 190px);
   }
 }
 
@@ -152,6 +152,7 @@
   background-color: $green-1;
   border-radius: 3px;
   opacity: 0;
+  outline: none;
   cursor: pointer;
 
   @media (min-width: $medium-screen) {
