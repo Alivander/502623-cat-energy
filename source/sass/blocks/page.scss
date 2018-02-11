@@ -22,39 +22,27 @@
   }
 }
 
-.page__container {
-  max-width: $large-screen;
-  margin: 0 auto;
-  padding-right: $s-field;
-  padding-left: $s-field;
-
-  @media (min-width: $medium-screen) {
-    padding-right: $m-field;
-    padding-left: $m-field;
-  }
-
-  @media (min-width: $large-screen) {
-    padding-right: $l-field;
-    padding-left: $l-field;
-  }
-}
-
 .page__wrapper {
   @media (min-width: $large-screen) {
-    background-image: linear-gradient(to right, transparent 0%, transparent calc(50% + 40px), $green-1 calc(50% + 40px), $green-1 100%);
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(to right, transparent 0%, transparent calc(50% + #{$l-field}), $green-1 calc(50% + #{$l-field}), $green-1 100%);
     background-position: center top;
     background-size: 100%;
     background-repeat: no-repeat;
   }
-}
 
-.page__header-back {
-  @media (min-width: $large-screen) {
-    max-width: 1440px;
-    margin: 0 auto;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: calc(50% - #{$l-field});
+    height: 100%;
     background-image: url("../img/index-background-desktop@1x.jpg");
-    background-position: right top;
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
