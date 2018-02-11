@@ -12,21 +12,12 @@
     border: 1px solid $l-grey-2;
   }
 
-  input:focus + &,
   &:hover::before {
     border: 1px solid $l-grey-3;
   }
 
   &:active {
     opacity: 0.3;
-  }
-
-  input:disabled + & {
-    opacity: 0.3;
-  }
-
-  input:disabled + &::before {
-    border: 1px solid $l-grey-2;
   }
 
   @media (min-width: $medium-screen) {
@@ -38,7 +29,7 @@
   }
 }
 
-[type="checkbox"]:checked + .checkbox::after {
+input:checked + .checkbox::after {
   content: "";
   position: absolute;
   top: 7px;
@@ -54,4 +45,16 @@
     top: 12px;
     left: 10px;
   }
+}
+
+input:focus + .checkbox::before {
+  border: 1px solid $l-grey-3;
+}
+
+input:disabled + .checkbox {
+  opacity: 0.3;
+}
+
+input:disabled + .checkbox::before {
+  border: 1px solid $l-grey-2;
 }

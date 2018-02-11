@@ -17,21 +17,21 @@
   padding: 40px 0 30px;
   border-bottom: 1px solid $l-grey-3;
 
-  & img {
-    display: block;
-    width: 128px;
-    height: 24px;
-    margin: 0 auto;
-  }
-
   @media (min-width: $medium-screen) {
     width: 160px;
     padding: 0;
     border: none;
+  }
+}
 
-    & img {
-      margin: 0;
-    }
+.footer__name img {
+  display: block;
+  width: 128px;
+  height: 24px;
+  margin: 0 auto;
+
+  @media (min-width: $medium-screen) {
+    margin: 0;
   }
 }
 
@@ -53,17 +53,11 @@
   padding: 20px 0;
   font-family: "Arial", sans-serif;
 
-  &:focus svg,
-  &:hover svg {
-    fill: $green-1;
-  }
-
   &:active {
     opacity: 0.3;
   }
 
   @media (min-width: $medium-screen) {
-    width: 163px;
     margin-bottom: -20px;
     padding: 0;
   }
@@ -71,4 +65,13 @@
   @media (min-width: $large-screen) {
     margin-bottom: 0;
   }
+}
+
+.footer__copyright svg {
+  margin-left: 25px;
+}
+
+.footer__copyright:focus svg,
+.footer__copyright:hover svg {
+  fill: $green-1;
 }

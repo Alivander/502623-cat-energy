@@ -1,27 +1,3 @@
-.page {
-  &--index {
-    & .page__title {
-      padding: 0;
-    }
-
-    & .contacts {
-      background-color: #ffffff;
-    }
-  }
-
-  @media (min-width: $large-screen) {
-    &--index {
-      & .page__header {
-        color: #ffffff;
-      }
-
-      & .navigation__link--current {
-        border-bottom-color: #ffffff;
-      }
-    }
-  }
-}
-
 .page__wrapper {
   @media (min-width: $large-screen) {
     position: relative;
@@ -52,18 +28,14 @@
 }
 
 .page__header {
-  color: $d-grey-3;
-
   @media (min-width: $medium-screen) {
     padding-top: 22px;
     padding-bottom: 22px;
-    color: $d-grey-2;
   }
 
   @media (min-width: $large-screen) {
     padding-top: 52px;
     padding-bottom: 20px;
-    color: $d-grey-3;
   }
 }
 

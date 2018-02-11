@@ -103,6 +103,12 @@
   }
 }
 
+.product__features tr {
+  @media (min-width: $medium-screen) {
+    border-bottom: 1px solid $l-grey-3;
+  }
+}
+
 .product__features td {
   padding: 0;
 

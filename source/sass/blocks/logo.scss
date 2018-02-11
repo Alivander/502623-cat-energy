@@ -9,12 +9,12 @@
   background-color: #ffffff;
   border-bottom: 1px solid $l-grey-2;
 
-  &:focus,
-  &:hover {
+  &[href]:focus,
+  &[href]:hover {
     opacity: 0.8;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.6;
   }
 

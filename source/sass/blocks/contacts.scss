@@ -1,5 +1,9 @@
 .contacts {
   position: relative;
+
+  &--bg-white {
+    background-color: #ffffff;
+  }
 }
 
 .contacts__partners {
@@ -56,14 +60,16 @@
   @media (min-width: $medium-screen) {
     max-width: 160px;
     text-align: right;
-
-    & br {
-      line-height: 40px;
-    }
   }
 
   @media (min-width: $large-screen) {
     text-align: left;
+  }
+}
+
+.contacts__address br {
+  @media (min-width: $medium-screen) {
+    line-height: 40px;
   }
 }
 

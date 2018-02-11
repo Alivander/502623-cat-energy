@@ -34,6 +34,7 @@
   }
 
   @media (min-width: $large-screen) {
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
     border: none;
@@ -131,7 +132,8 @@
   }
 
   @media (min-width: $large-screen) {
-    max-width: 245px;
+    width: calc(25% - #{$l-field} * 1.5);
+    margin-right: $l-field * 2;
     margin-bottom: 0;
     padding-right: 0;
 
@@ -143,6 +145,10 @@
 
     &:first-of-type::after {
       width: 95%;
+    }
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
     }
   }
 }
