@@ -12,47 +12,16 @@
   }
 }
 
-.form__two-columns {
+.form__wrapper {
   @media (min-width: $large-screen) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 30px;
 
-    & > .form__fieldset,
-    & > .form__field {
+    & .form__fieldset {
       width: calc(50% - #{$l-field});
       margin-bottom: 5px;
-    }
-  }
-}
-
-.form__four-columns {
-  & .form__field {
-    margin-bottom: 12px;
-  }
-
-  @media (min-width: $medium-screen) {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-
-    &.form__fieldset {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-
-    & > .form__field {
-      width: calc(50% - #{$m-field});
-      margin-bottom: 33px;
-    }
-  }
-
-  @media (min-width: $large-screen) {
-    & > .form__field {
-      width: calc(25% - (#{$l-field} * 1.5));
-      margin-bottom: 33px;
     }
   }
 }
@@ -94,6 +63,12 @@
     }
   }
 
+  &--four-columns {
+    & .form__field {
+      margin-bottom: 12px;
+    }
+  }
+
   @media (min-width: $medium-screen) {
     margin: 0;
     padding: 30px $l-field;
@@ -106,6 +81,20 @@
 
       & .form__field {
         margin: 0 27px 13px;
+      }
+    }
+
+    &--four-columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      & > .form__field {
+        width: calc(50% - #{$m-field});
+        margin-bottom: 33px;
       }
     }
   }
@@ -127,6 +116,27 @@
 
       & .form__field {
         margin: 0 27px 13px;
+      }
+    }
+
+    &--two-columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      & .form__field {
+        width: calc(50% - #{$l-field});
+        margin-bottom: 5px;
+      }
+    }
+
+    &--four-columns {
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      & .form__field {
+        width: calc(25% - (#{$l-field} * 1.5));
+        margin-bottom: 33px;
       }
     }
   }
@@ -198,6 +208,8 @@
   @include font(14px, 16px);
   display: block;
   font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
   text-align: center;
 
   @media (min-width: $medium-screen) {

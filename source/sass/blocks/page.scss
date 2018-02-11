@@ -39,7 +39,7 @@
   }
 }
 
-.page__header-wrapper {
+.page__wrapper {
   @media (min-width: $large-screen) {
     background-image: linear-gradient(to right, transparent 0%, transparent calc(50% + 40px), $green-1 calc(50% + 40px), $green-1 100%);
     background-position: center top;
