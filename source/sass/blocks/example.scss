@@ -89,29 +89,28 @@
   }
 
   @media (min-width: $large-screen) {
-    justify-content: flex-start;
+    width: 365px;
     margin-bottom: 60px;
   }
 }
 
 .example__result {
-  flex-grow: 1;
   position: relative;
-  max-width: 43.9%;
-  padding: 13px 10px 17px;
+  width: 44%;
+  padding: 15px 10px;
   margin-bottom: 35px;
   text-align: center;
   border: 1px solid $l-grey-3;
 
   @media (min-width: $medium-screen) {
-    max-width: calc(25% - (#{$m-field} / 2));
+    width: 160px;
+    margin-right: 45px;
     margin-bottom: 0;
     padding: 15px 10px 20px;
   }
 
   @media (min-width: $large-screen) {
-    max-width: 162px;
-    margin-right: 40px;
+    margin-right: 0;
     margin-bottom: 55px;
   }
 }
@@ -153,20 +152,20 @@
 
 .example__cost {
   display: block;
-  min-width: 100%;
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
   color: $d-grey-3;
 
   @media (min-width: $medium-screen) {
     @include font(20px, 29px);
-    min-width: auto;
-    width: calc(50% - (#{$m-field} * 2));
+    width: 30%;
+    margin-left: auto;
     text-align: right;
   }
 
   @media (min-width: $large-screen) {
-    min-width: 100%;
+    width: 100%;
     text-align: left;
   }
 }
