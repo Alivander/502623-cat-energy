@@ -91,9 +91,9 @@
   }
 
   @media (min-width: $medium-screen) {
+    align-self: flex-end;
     width: 45.7%;
-    margin-top: auto;
-    padding: 54px 37px 40px;
+    padding: 55px 37px 40px;
     border: 1px solid $l-grey-1;
 
     &::before {
@@ -107,7 +107,7 @@
   }
 
   @media (min-width: $large-screen) {
-    max-width: 245px;
+    max-width: calc(25% - (#{$l-field} * 1.5))
   }
 }
 
@@ -126,7 +126,6 @@
 
   @media (min-width: $large-screen) {
     width: 100%;
-    margin-bottom: 24px;
   }
 }
 

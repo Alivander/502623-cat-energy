@@ -74,6 +74,7 @@
 
   &::before,
   &::after {
+    display: block;
     min-width: $m-field;
     margin-top: 15px;
     height: 3px;
