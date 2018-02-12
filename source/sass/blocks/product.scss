@@ -32,8 +32,7 @@
   }
 
   @media (min-width: $large-screen) {
-    height: 270px;
-    margin-bottom: 35px;
+    height: 265px;
   }
 }
 
@@ -100,6 +99,12 @@
 
   @media (min-width: $large-screen) {
     margin-bottom: 30px;
+  }
+}
+
+.product__features tr {
+  @media (min-width: $medium-screen) {
+    border-bottom: 1px solid $l-grey-3;
   }
 }
 

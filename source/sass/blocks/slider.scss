@@ -10,8 +10,12 @@
   @media (min-width: $large-screen) {
     flex-shrink: 0;
     background-image: linear-gradient(to right, $l-grey-1 0%, $l-grey-1 calc(50% + 20px), $l-grey-2 calc(50% + 20px), $l-grey-2 100%);
-    background-size: 100% calc(100% - 208px);
+    background-size: 100% calc(100% - 190px);
   }
+}
+
+.slider__input {
+  display: none;
 }
 
 .slider__content {
@@ -148,6 +152,7 @@
   background-color: $green-1;
   border-radius: 3px;
   opacity: 0;
+  outline: none;
   cursor: pointer;
 
   @media (min-width: $medium-screen) {
@@ -187,21 +192,25 @@
     &--after {
       right: 0;
     }
+
+    &:not(:first-of-type) {
+      display: none;
+    }
   }
 }
 
-.slider-toggle-before:checked ~ .slider__control .slider__toggle--before {
+.slider__input--before:checked ~ .slider__control .slider__toggle--before {
   opacity: 1;
 }
 
-.slider-toggle-before:checked ~ .slider__content .slider__image--before {
+.slider__input--before:checked ~ .slider__content .slider__image--before {
   opacity: 1;
 }
 
-.slider-toggle-after:checked ~ .slider__control .slider__toggle--after {
+.slider__input--after:checked ~ .slider__control .slider__toggle--after {
   opacity: 1;
 }
 
-.slider-toggle-after:checked ~ .slider__content .slider__image--after {
+.slider__input--after:checked ~ .slider__content .slider__image--after {
   opacity: 1;
 }

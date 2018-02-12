@@ -3,67 +3,43 @@
 
   @media (min-width: $medium-screen) {
     @include font(20px, 20px);
-    padding-top: 30px;
+    padding-top: 25px;
     padding-bottom: 28px;
   }
-}
 
-.form__two-columns {
   @media (min-width: $large-screen) {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 30px;
-
-    & > .form__fieldset,
-    & > .form__field {
-      width: calc(50% - #{$l-field});
-      margin-bottom: 5px;
-    }
+    padding-top: 30px;
   }
 }
 
-.form__four-columns {
-  & .form__field {
-    margin-bottom: 12px;
-  }
-
-  @media (min-width: $medium-screen) {
+.form__wrapper {
+  @media (min-width: $large-screen) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-
-    &.form__fieldset {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-
-    & > .form__field {
-      width: calc(50% - #{$m-field});
-      margin-bottom: 33px;
-    }
+    margin-bottom: 30px;
   }
+}
 
+.form__wrapper .form__fieldset {
   @media (min-width: $large-screen) {
-    & > .form__field {
-      width: calc(25% - (#{$l-field} * 1.5));
-      margin-bottom: 33px;
-    }
+    width: calc(50% - #{$l-field});
+    margin-bottom: 5px;
   }
 }
 
 .form__info {
   @include font(14px, 18px);
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
   text-transform: uppercase;
   color: $d-grey-3;
 
   @media (min-width: $medium-screen) {
     @include font(20px, 30px);
     margin-bottom: 35px;
-    padding: 0 $l-field;
+    padding: 5px $l-field 0;
   }
 
   @media (min-width: $large-screen) {
@@ -84,10 +60,6 @@
     padding-left: $s-field;
     border-top: 1px solid $l-grey-2;
     border-bottom: 1px solid $l-grey-2;
-
-    & .form__field {
-      margin-bottom: 13px;
-    }
   }
 
   @media (min-width: $medium-screen) {
@@ -99,10 +71,15 @@
       padding: 23px 70px 25px 0;
       border: 1px solid $l-grey-2;
       border-right: none;
+    }
 
-      & .form__field {
-        margin: 0 27px 13px;
-      }
+    &--four-columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 
@@ -120,11 +97,52 @@
       margin: 0;
       padding: 23px 70px 25px 0;
       border: 1px solid $l-grey-2;
-
-      & .form__field {
-        margin: 0 27px 13px;
-      }
     }
+
+    &--two-columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    &--four-columns {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.form__fieldset--frame .form__field {
+  margin-bottom: 13px;
+
+  @media (min-width: $medium-screen) {
+    margin: 0 27px 13px;
+  }
+
+  @media (min-width: $large-screen) {
+    margin: 0 27px 13px;
+  }
+}
+
+.form__fieldset--two-columns .form__field {
+  @media (min-width: $large-screen) {
+    width: calc(50% - #{$l-field});
+    margin-bottom: 5px;
+  }
+}
+
+.form__fieldset--four-columns .form__field {
+  margin-bottom: 12px;
+
+  @media (min-width: $medium-screen) {
+    width: calc(50% - #{$m-field});
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: $large-screen) {
+    width: calc(25% - (#{$l-field} * 1.5));
+    margin-bottom: 33px;
   }
 }
 
@@ -140,6 +158,12 @@
     & br {
       display: none;
     }
+  }
+}
+
+.form__legend br {
+  @media (min-width: $medium-screen) {
+    display: none;
   }
 }
 
@@ -194,6 +218,8 @@
   @include font(14px, 16px);
   display: block;
   font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
   text-align: center;
 
   @media (min-width: $medium-screen) {

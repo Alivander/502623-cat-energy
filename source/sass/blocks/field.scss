@@ -123,3 +123,11 @@
     }
   }
 }
+
+.field__input:focus + .field__icon {
+  fill: $green-1;
+}
+
+.field__input:invalid + .field__icon {
+  fill: $red;
+}

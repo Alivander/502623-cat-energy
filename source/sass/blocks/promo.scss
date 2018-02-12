@@ -34,6 +34,7 @@
 
 .promo__heading {
   margin-bottom: 22px;
+  padding: 0;
   line-height: 1;
   color: inherit;
 
@@ -43,7 +44,6 @@
 
   @media (min-width: $large-screen) {
     margin: 0 0 40px;
-    padding-left: 0;
     max-width: 570px;
   }
 }

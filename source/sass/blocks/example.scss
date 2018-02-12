@@ -27,7 +27,7 @@
   @media (min-width: $large-screen) {
     display: flex;
     justify-content: center;
-    width: $large-screen;
+    max-width: $large-screen;
     margin: 0 auto;
     padding: 0 $l-field;
   }
@@ -48,7 +48,8 @@
 }
 
 .example__heading {
-  margin-bottom: 23px;
+  margin-bottom: 20px;
+  padding: 0;
 
   @media (min-width: $medium-screen) {
     margin-bottom: 65px;
@@ -162,20 +163,22 @@
     min-width: auto;
     width: calc(50% - (#{$m-field} * 2));
     text-align: right;
-
-    & span {
-      display: block;
-    }
   }
 
   @media (min-width: $large-screen) {
     min-width: 100%;
     text-align: left;
+  }
+}
 
-    & span {
-      display: inline-block;
-      width: 60px;
-    }
+.example__cost span {
+  @media (min-width: $medium-screen) {
+    display: block;
+  }
+
+  @media (min-width: $large-screen) {
+    display: inline-block;
+    width: 60px;
   }
 }
 
