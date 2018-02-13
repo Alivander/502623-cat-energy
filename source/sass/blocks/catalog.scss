@@ -107,7 +107,7 @@
   }
 
   @media (min-width: $large-screen) {
-    max-width: calc(25% - (#{$l-field} * 1.5))
+    max-width: calc(25% - (#{$l-field} * 1.5));
   }
 }
 
