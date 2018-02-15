@@ -170,7 +170,7 @@
   }
 }
 
-.example__cost nobr {
+.example__cost span {
   @media (min-width: $medium-screen) {
     display: block;
   }
