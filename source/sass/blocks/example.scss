@@ -170,14 +170,14 @@
   }
 }
 
-.example__cost span {
+.example__cost nobr {
   @media (min-width: $medium-screen) {
     display: block;
   }
 
   @media (min-width: $large-screen) {
     display: inline-block;
-    width: 60px;
+    margin-left: 65px;
   }
 }
 
