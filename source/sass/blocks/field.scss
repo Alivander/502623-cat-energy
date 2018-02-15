@@ -122,6 +122,13 @@
       right: 15px;
     }
   }
+
+  @media (min-width: $large-screen) {
+    &--phone {
+      top: 17px;
+      right: 18px;
+    }
+  }
 }
 
 .field__input:focus + .field__icon {
