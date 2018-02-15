@@ -1,5 +1,15 @@
 .footer {
   background-color: $l-grey-1;
+
+  &--border {
+    border-bottom: 6px solid #ffffff;
+  }
+
+  @media (min-width: $medium-screen) {
+    &--border {
+      border-bottom: none;
+    }
+  }
 }
 
 .footer__bottom {
