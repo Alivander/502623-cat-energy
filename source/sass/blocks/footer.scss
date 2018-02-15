@@ -13,9 +13,18 @@
 }
 
 .footer__name {
-  margin: 0;
+  display: block;
   padding: 40px 0 30px;
   border-bottom: 1px solid $l-grey-3;
+
+  &[href]:focus,
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $medium-screen) {
     width: 160px;
@@ -69,7 +78,7 @@
 }
 
 .footer__copyright svg {
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 .footer__copyright:focus svg,
