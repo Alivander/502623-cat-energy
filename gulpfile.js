@@ -49,7 +49,7 @@ gulp.task("style", function() {
 });
 
 gulp.task("script", function () {
-	return gulp.src("source/js/**/*.js")
+  return gulp.src("source/js/**/*.js")
     .pipe(plumber())
     .pipe(jsmin())
     .pipe(rename({suffix: ".min"}))
