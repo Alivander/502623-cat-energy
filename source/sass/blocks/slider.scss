@@ -81,6 +81,16 @@
     opacity: 1;
 
     &--before {
+      left: 5px;
+    }
+
+    &--after {
+      right: -5px;
+    }
+  }
+
+  @media (min-width: $large-screen) {
+    &--before {
       left: 0;
     }
 
